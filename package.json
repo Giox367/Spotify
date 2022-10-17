@@ -1,5 +1,11 @@
 {
   "dependencies": {
     "bootstrap": "^5.2.2"
-  }
+  },
+  
+  "scripts":{ 
+"sass:watch":"sass style.scss style.css -w"
+}
+
+ 
 }
