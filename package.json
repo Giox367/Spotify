@@ -4,7 +4,7 @@
   },
   
   "scripts":{ 
-"sass:watch":"sass style.scss style.css -w"
+"sass:watch":"sass customize.scss customize.css -w"
 }
 
  

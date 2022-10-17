@@ -5,17 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Spotify 2.0" />
-    <link rel="stylesheet" href="style.scss" />
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="customize.css" />
     <title>Spotify</title>
   </head>
 
   <body>
-    <div id="container">
-      <div>Sidebar-left</div>
-      <div>Main</div>
-      <div>Sidebar-right</div>
-      <div id="sticky"></div>
+    <div class="container-fluid">
+      <div id="container" class="row d-flex">
+        <div class="col-3 bg-primary">sidebar l</div>
+        <div class="col-7 bg-success">main</div>
+        <div class="col-2 bg-secondary">sidebar r</div>
+      </div>
+      <div class="row sticky-bottom p-3 bg-danger">player</div>
     </div>
+
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
