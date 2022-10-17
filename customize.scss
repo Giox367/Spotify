@@ -1,16 +1,14 @@
 // @import "./node_modules/bootstrap/scss/bootstrap.scss";
 @import "./mixin.scss";
-#container  {
-    height: 100%;
-}
 
-// sidebar left
+
+
 
 #dot-icon {
-    margin-bottom: 8px;
+    @include mb-8px ;
 }
-#list-menu {
-    margin-bottom: 2em;
+#list-menu  {
+    @include mb-2em;
 }
 nav, span {
 @include text-withe;
@@ -23,38 +21,29 @@ nav, span {
 
 .button-menu {
     @include  button-menu;
-// 	background: none;
-// 	color: inherit;
-// 	border: none;
-// 	padding: 0;
-// 	font: inherit;
-// 	cursor: pointer;
-// 	outline: inherit;
-//     display: flex;
-//     align-items: center;
-//   gap: 1em;
 }
-svg {
-    width: 12px;
-    overflow: hidden;
+.square>svg {
+    @include icone-square;
 }
-#icon-square {
-   line-height: 30px;
+#icon-square, #list-menu {
+   @include  line-height;
 }
 
 a {
     @include style-link;
 }
-a:hover{
-    color: white;
-}
-.button-menu:hover {
-    color: white;
+
+.button-menu:hover,h5:hover,a:hover,#icone-side-r:hover {
+    @include color-white;
 }
 
-hr{
-    color: lightgray;
+hr,h5,#icone-side-r{
+  @include  color-lightgray;
    
 }
+ svg{
+   @include icone-no-square;
+}
+
 
 

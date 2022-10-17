@@ -30,4 +30,29 @@
    cursor: pointer;
    color: lightgray;
 }
+@mixin icone-no-square {
+    width: 20px;
+}
+@mixin mb-8px {
+    margin-bottom: 8px;
+}
+@mixin mb-2em {
+    margin-bottom: 2em;
+}
+@mixin icone-square {
+    width: 12px;
+    overflow: hidden;
+}
+@mixin line-height {
+    line-height: 30px;
+}
+@mixin color-white {
+    color: white;
+}
+@mixin color-lightgray {
+    color: lightgray;
+}
+
+
+
 
