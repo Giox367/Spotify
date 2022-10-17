@@ -62,4 +62,15 @@ svg {
   width: 20px;
 }
 
+#icone-side-r svg {
+  margin-inline: 5px;
+}
+
+img {
+  background-color: aqua;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
 /*# sourceMappingURL=customize.css.map */

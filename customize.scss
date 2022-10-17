@@ -44,6 +44,18 @@ hr,h5,#icone-side-r{
  svg{
    @include icone-no-square;
 }
+#icone-side-r svg{
+  @include margin-i-5px
+}
+
+img {
+    background-color: aqua;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+
+}
+
 
 
 
