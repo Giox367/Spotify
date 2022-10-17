@@ -10,11 +10,9 @@
 #list-menu  {
     @include mb-2em;
 }
-nav, span {
-@include text-withe;
+nav, #icon-square, .friend-status {
+@include text-lightgray;
 }
-
-
 .square {
     @include square-box;
 }
@@ -37,7 +35,7 @@ a {
     @include color-white;
 }
 
-hr,h5,#icone-side-r{
+hr,h6,#icone-side-r{
   @include  color-lightgray;
    
 }
@@ -45,7 +43,7 @@ hr,h5,#icone-side-r{
    @include icone-no-square;
 }
 #icone-side-r svg{
-  @include margin-i-5px
+  @include margin-i-3px
 }
 
 img {
@@ -54,6 +52,19 @@ img {
     height: 20px;
     border-radius: 50%;
 
+}
+
+h6{
+    @include h6-size
+}
+
+.description-content, .description-content>svg {
+    font-size: 10px;
+    width: 10px; 
+}
+
+#sidebar-r {
+    background-color: gray;
 }
 
 

@@ -1,6 +1,6 @@
-@mixin text-withe {
+@mixin text-lightgray {
     color:  lightgray;
-    font-size: 16px;
+    font-size: 12px;
 };
 
 @mixin square-box {
@@ -31,7 +31,7 @@
    color: lightgray;
 }
 @mixin icone-no-square {
-    width: 20px;
+    width: 16px;
 }
 @mixin mb-8px {
     margin-bottom: 8px;
@@ -52,8 +52,11 @@
 @mixin color-lightgray {
     color: lightgray;
 }
-@mixin margin-i-5px {
-    margin-inline: 5px;
+@mixin margin-i-3px {
+    margin-inline: 3px;
+}
+@mixin h6-size {
+    font-size: 14px;
 }
 
 
