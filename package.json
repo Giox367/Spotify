@@ -2,10 +2,7 @@
   "dependencies": {
     "bootstrap": "^5.2.2"
   },
-  
-  "scripts":{ 
-"sass:watch":"sass customize.scss customize.css -w"
-}
-
- 
+  "scripts": {
+    "sass:watch": "sass customize.scss customize.css -w"
+  }
 }
