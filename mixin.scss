@@ -1,0 +1,33 @@
+@mixin text-withe {
+    color:  lightgray;
+    font-size: 16px;
+};
+
+@mixin square-box {
+   background-color: lightgrey;
+   color: black;
+   border-radius: 2px;
+   width: 16px;
+   height: 16px;
+   display: flex;
+   align-items: center;
+   justify-content: center; 
+}
+@mixin button-menu {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    display: flex;
+    align-items: center;
+  gap: 1em;
+}
+@mixin style-link {
+   text-decoration: none;
+   cursor: pointer;
+   color: lightgray;
+}
+

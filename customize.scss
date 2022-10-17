@@ -1,4 +1,60 @@
 // @import "./node_modules/bootstrap/scss/bootstrap.scss";
+@import "./mixin.scss";
 #container  {
     height: 100%;
 }
+
+// sidebar left
+
+#dot-icon {
+    margin-bottom: 8px;
+}
+#list-menu {
+    margin-bottom: 2em;
+}
+nav, span {
+@include text-withe;
+}
+
+
+.square {
+    @include square-box;
+}
+
+.button-menu {
+    @include  button-menu;
+// 	background: none;
+// 	color: inherit;
+// 	border: none;
+// 	padding: 0;
+// 	font: inherit;
+// 	cursor: pointer;
+// 	outline: inherit;
+//     display: flex;
+//     align-items: center;
+//   gap: 1em;
+}
+svg {
+    width: 12px;
+    overflow: hidden;
+}
+#icon-square {
+   line-height: 30px;
+}
+
+a {
+    @include style-link;
+}
+a:hover{
+    color: white;
+}
+.button-menu:hover {
+    color: white;
+}
+
+hr{
+    color: lightgray;
+   
+}
+
+

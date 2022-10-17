@@ -2,4 +2,68 @@
   height: 100%;
 }
 
+#dot-icon {
+  margin-bottom: 8px;
+}
+
+#list-menu {
+  margin-bottom: 2em;
+}
+
+nav, span {
+  color: lightgray;
+  font-size: 16px;
+}
+
+.square {
+  background-color: lightgrey;
+  color: black;
+  border-radius: 2px;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-menu {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+svg {
+  width: 12px;
+  overflow: hidden;
+}
+
+#icon-square {
+  line-height: 30px;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: lightgray;
+}
+
+a:hover {
+  color: white;
+}
+
+.button-menu:hover {
+  color: white;
+}
+
+hr {
+  color: lightgray;
+}
+
 /*# sourceMappingURL=customize.css.map */
