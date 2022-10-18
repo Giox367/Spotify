@@ -64,6 +64,10 @@
     justify-content: space-between;
     margin-top: 3px;
 }
+@mixin d-flex {
+    display: flex;
+    
+}
 
 
 
