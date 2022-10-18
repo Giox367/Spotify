@@ -64,22 +64,31 @@ function fetchDisplay(arrayFetchIter) {
   //   display.innerHTML = "";
   console.log(arrayFetchIter);
   for (const res of arrayFetchIter) {
-    display.innerHTML = `<div class="raw">
+    display.innerHTML = `<div class="raw d-flex ">
             <div>
                 <img src="${res.cover_medium}">
             </div>
             <div>
                 <div>${res.title}</div>
                 <div>
-                  <div>${res.contributors}</div> 
+                  <div>${res.artist.name}</div> 
                 </div>
                 <div>
                     <div> Ascolta album</div>
                 </div>
                 <div>
-                    <button>Play/Pause</button>
-                    <button>Salva</button>
-                    <button>altre opzioni</button>
+                <button class="btn " type="button"">
+                <img src="./node_modules/bootstrap-icons/icons/play-circle-fill.svg">
+
+              </button>
+              <button class="btn " type="button" >
+              
+              <img src="./node_modules/bootstrap-icons/icons/heart-fill.svg">
+
+            </button>
+                    <button class="btn " type="button">
+                    <img src="./node_modules/bootstrap-icons/icons/three-dots.svg">
+                  </button>
                 </div>
             </div>
         </div>`;
