@@ -85,12 +85,8 @@ h6 {
   width: 10px;
 }
 .friend-status {
-    border: 1px solid red;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
+   @include friend-banner
 }
 #right-column {
-    padding: 0px;
-    margin: 0px;
+   @include padding-margin-0 
 }

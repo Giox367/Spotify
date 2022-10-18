@@ -65,8 +65,17 @@
     margin-top: 3px;
 }
 @mixin d-flex {
+    display: flex;  
+}
+@mixin friend-banner {
+    border: 1px solid red;
     display: flex;
-    
+    justify-content: space-around;
+    align-items: flex-start;
+}
+@mixin padding-margin-0 {
+    padding: 0px;
+    margin: 0px;
 }
 
 
