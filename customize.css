@@ -84,8 +84,46 @@ h6 {
 }
 
 #playlist {
-  height: 300px;
+  height: 400px;
   overflow-y: scroll;
+}
+
+#right-column {
+  padding: 0px;
+  margin: 0px;
+}
+
+.friend-status {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding-inline: 5px;
+  margin-bottom: 2em;
+}
+
+#icone-side-r {
+  display: flex;
+}
+
+img {
+  background-color: aqua;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#attivita-amici {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 5px;
+  margin-bottom: 1.5em;
+  padding-inline: 5px;
+}
+
+#icone-side-r svg {
+  margin-inline: 3px;
 }
 
 .sidebar {
@@ -100,16 +138,10 @@ h6 {
 }
 
 .closebtn {
-  position: absolute;
-  top: 0;
-  right: 8px;
   cursor: pointer;
 }
 
 .openbtn, .dropbtn {
-  position: relative;
-  top: 0;
-  left: 10;
   border: none;
   background: none;
   cursor: pointer;
@@ -133,6 +165,10 @@ h6 {
 .show {
   display: flex;
   flex-direction: column;
+}
+
+svg {
+  vertical-align: unset;
 }
 
 /*# sourceMappingURL=customize.css.map */

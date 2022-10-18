@@ -23,7 +23,7 @@
                   <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
                 </svg></button>
                 <div id="dotMenu" class="dropdown-content">
-                  <a href="#">Link 1</a>
+                  <a href="#" onclick="openNav()">Link 1</a>
                   <a href="#">Link 2</a>
                   <a href="#">Link 3</a>
                 </div>
@@ -132,17 +132,23 @@
         <!--fine side left-->
         <div class="col-9 bg-success">
           <div id="sidebar-right" class="sidebar">
-            <a href="" class="closebtn" onclick="closeNav()"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-              <path
-                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
-              />
-            </svg></a>
+           
            
          
           
           
           
-            <div><h6>Attività amici</h6></div>
+            <div id="attivita-amici"><h6>Attività amici</h6>
+            <div id="icone-attivita-amici"><button class="openbtn" ><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+              <path
+                d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"
+              />
+            </svg></button>
+            <a href="" class="closebtn" onclick="closeNav()"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+              <path
+                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+              />
+            </svg></a></div></div>
             
          
 
@@ -199,88 +205,13 @@
             <div class="time">3 giorni</div>
           </section>
         </div>
-        <div id="open-menu">
-          <button class="openbtn" onclick="openNav()"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
-            <path
-              d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"
-            />
-          </svg></button>
+        
           
-        </div>
+          
+       
         </div> 
         
-        <!-- inizio side right-->
-        <!-- <div id="right-column" class="col-2 bg-black">
-          <div id="attivita-amici">
-            <div><h6>Attività amici</h6></div>
-            <div id="icone-side-r">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
-                <path
-                  d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"
-                />
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-                <path
-                  d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
-                />
-              </svg>
-            </div>
-          </div>
-
-           
-          <section class="friend-status">
-            <div class="image" style="display: flex"><img src="" alt="" /></div>
-            <div class="title-content">
-              Charlie Hookhman <br />
-              <span class="description-content"
-                >In Camera &middot Youmi Zouma <br />
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-disc-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-6 0a2 2 0 1 0-4 0 2 2 0 0 0 4 0zM4 8a4 4 0 0 1 4-4 .5.5 0 0 0 0-1 5 5 0 0 0-5 5 .5.5 0 0 0 1 0zm9 0a.5.5 0 1 0-1 0 4 4 0 0 1-4 4 .5.5 0 0 0 0 1 5 5 0 0 0 5-5z"
-                  />
-                </svg>
-                EP III
-              </span>
-            </div>
-
-            <div class="time">4 ore</div>
-          </section>
-          <section class="friend-status">
-            <div class="image" style="display: flex"><img src="" alt="" /></div>
-            <div class="title-content">
-              Lightdark02 <br />
-              <span class="description-content"
-                >Aimed to kill &middot Jade LeMac <br />
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-disc-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-6 0a2 2 0 1 0-4 0 2 2 0 0 0 4 0zM4 8a4 4 0 0 1 4-4 .5.5 0 0 0 0-1 5 5 0 0 0-5 5 .5.5 0 0 0 1 0zm9 0a.5.5 0 1 0-1 0 4 4 0 0 1-4 4 .5.5 0 0 0 0 1 5 5 0 0 0 5-5z"
-                  />
-                </svg>
-                Aimed to kill
-              </span>
-            </div>
-
-            <div class="time">8 ore</div>
-          </section>
-          <section class="friend-status">
-            <div class="image" style="display: flex"><img src="" alt="" /></div>
-            <div class="title-content">
-              Valeria Traverso <br />
-              <span class="description-content"
-                >New Kings &middot Sleeping Wolf <br />
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
-                  <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z" />
-                  <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z" />
-                  <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z" />
-                </svg>
-                Twint Badass mood
-              </span>
-            </div>
-
-            <div class="time">3 giorni</div>
-          </section>
-        </div> -->
-        <!-- fine sidebar right-->
+        
       </div>
       <div class="row sticky-bottom p-3 bg-danger">player</div>
     </div>
