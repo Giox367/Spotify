@@ -1,0 +1,5 @@
+1) Tre file html
+2) classi css da utilizzare in tutte le pagine
+3) Logica da applicare ai pulsanti
+4) importazione delle Api 
+5) Media query
