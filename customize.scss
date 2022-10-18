@@ -11,7 +11,8 @@
 
 nav,
 #icon-square,
-.friend-status {
+.friend-status,
+#playlist>p  {
   @include text-lightgray;
 }
 
@@ -32,20 +33,22 @@ nav,
   @include line-height;
 }
 
-a {
+a, #playlist>p {
   @include style-link;
 }
 
 .button-menu:hover,
 h5:hover,
 a:hover,
-#icone-side-r:hover {
+#icone-side-r:hover,
+#playlist>p:hover {
   @include color-white;
 }
 
 hr,
 h6,
-#icone-side-r {
+#icone-side-r,
+#playlist>p {
   @include color-lightgray;
 }
 

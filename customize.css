@@ -8,7 +8,8 @@
 
 nav,
 #icon-square,
-.friend-status {
+.friend-status,
+#playlist > p {
   color: lightgray;
   font-size: 12px;
 }
@@ -47,7 +48,7 @@ nav,
   line-height: 30px;
 }
 
-a {
+a, #playlist > p {
   text-decoration: none;
   cursor: pointer;
   color: lightgray;
@@ -56,13 +57,15 @@ a {
 .button-menu:hover,
 h5:hover,
 a:hover,
-#icone-side-r:hover {
+#icone-side-r:hover,
+#playlist > p:hover {
   color: white;
 }
 
 hr,
 h6,
-#icone-side-r {
+#icone-side-r,
+#playlist > p {
   color: lightgray;
 }
 
