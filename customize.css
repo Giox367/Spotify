@@ -88,40 +88,32 @@ h6 {
   overflow-y: scroll;
 }
 
-#right-column {
-  padding: 0px;
-  margin: 0px;
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
 }
 
-.friend-status {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  margin-bottom: 2em;
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 8px;
+  cursor: pointer;
 }
 
-#icone-side-r {
-  display: flex;
-}
-
-img {
-  background-color: aqua;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-#attivita-amici {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin-top: 3px;
-  margin-bottom: 1.5em;
-}
-
-#icone-side-r svg {
-  margin-inline: 3px;
+.openbtn {
+  position: relative;
+  top: 0;
+  left: 10;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: lightgray;
 }
 
 /*# sourceMappingURL=customize.css.map */
