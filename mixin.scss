@@ -68,14 +68,22 @@
     display: flex;  
 }
 @mixin friend-banner {
-    border: 1px solid red;
+    
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
+  
 }
 @mixin padding-margin-0 {
     padding: 0px;
     margin: 0px;
+}
+@mixin round-img {
+    background-color: aqua;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 

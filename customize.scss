@@ -58,10 +58,7 @@ svg {
 }
 
 img {
-  background-color: aqua;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+ @include round-img;
 }
 
 h6 {
@@ -70,11 +67,10 @@ h6 {
 
 #attivita-amici {
   @include attivita-amici;
+  margin-bottom: 1.5em;
 }
 
-#sidebar-r {
-  background-color: gray;
-}
+
 #icone-side-r {
   @include d-flex
 }
@@ -85,7 +81,8 @@ h6 {
   width: 10px;
 }
 .friend-status {
-   @include friend-banner
+   @include friend-banner;
+   margin-bottom: 2em
 }
 #right-column {
    @include padding-margin-0 

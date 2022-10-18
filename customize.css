@@ -79,6 +79,7 @@ img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  overflow: hidden;
 }
 
 h6 {
@@ -90,10 +91,7 @@ h6 {
   align-items: flex-start;
   justify-content: space-between;
   margin-top: 3px;
-}
-
-#sidebar-r {
-  background-color: gray;
+  margin-bottom: 1.5em;
 }
 
 #icone-side-r {
@@ -107,10 +105,10 @@ h6 {
 }
 
 .friend-status {
-  border: 1px solid red;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
+  margin-bottom: 2em;
 }
 
 #right-column {
