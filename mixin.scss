@@ -86,9 +86,8 @@
     overflow: hidden;
 }
 @mixin scroll-bar {
-    height: 250px;
-    overflow-y: scroll;
-    
+    height: 300px;
+    overflow-y: scroll;   
 }
 
 

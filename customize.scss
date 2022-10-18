@@ -56,37 +56,40 @@ svg {
   @include icone-no-square;
 }
 
-#icone-side-r svg {
-  @include margin-i-3px;
-}
-
-img {
- @include round-img;
-}
 
 h6 {
-  @include h6-size;
-}
-
-#attivita-amici {
-  @include attivita-amici;
-  margin-bottom: 1.5em;
+    @include h6-size;
 }
 
 
-#icone-side-r {
-  @include d-flex
-}
+
 
 .description-content,
 .description-content > svg {
-  font-size: 10px;
-  width: 10px;
+    font-size: 10px;
+    width: 10px;
 }
-.friend-status {
-   @include friend-banner;
-   margin-bottom: 2em
+#playlist {
+    @include scroll-bar
 }
 #right-column {
-   @include padding-margin-0 
+    @include padding-margin-0 
+}
+.friend-status {
+    @include friend-banner;
+    margin-bottom: 2em
+}
+#icone-side-r {
+    @include d-flex
+}
+
+img {
+    @include round-img;
+}
+#attivita-amici {
+    @include attivita-amici;
+    margin-bottom: 1.5em;
+}
+#icone-side-r svg {
+  @include margin-i-3px;
 }

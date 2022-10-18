@@ -73,8 +73,35 @@ svg {
   width: 16px;
 }
 
-#icone-side-r svg {
-  margin-inline: 3px;
+h6 {
+  font-size: 14px;
+}
+
+.description-content,
+.description-content > svg {
+  font-size: 10px;
+  width: 10px;
+}
+
+#playlist {
+  height: 300px;
+  overflow-y: scroll;
+}
+
+#right-column {
+  padding: 0px;
+  margin: 0px;
+}
+
+.friend-status {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-bottom: 2em;
+}
+
+#icone-side-r {
+  display: flex;
 }
 
 img {
@@ -85,10 +112,6 @@ img {
   overflow: hidden;
 }
 
-h6 {
-  font-size: 14px;
-}
-
 #attivita-amici {
   display: flex;
   align-items: flex-start;
@@ -97,26 +120,8 @@ h6 {
   margin-bottom: 1.5em;
 }
 
-#icone-side-r {
-  display: flex;
-}
-
-.description-content,
-.description-content > svg {
-  font-size: 10px;
-  width: 10px;
-}
-
-.friend-status {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  margin-bottom: 2em;
-}
-
-#right-column {
-  padding: 0px;
-  margin: 0px;
+#icone-side-r svg {
+  margin-inline: 3px;
 }
 
 /*# sourceMappingURL=customize.css.map */
