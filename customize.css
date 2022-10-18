@@ -119,4 +119,9 @@ h6 {
   margin: 0px;
 }
 
+#playlist {
+  height: 300px;
+  overflow-y: scroll;
+}
+
 /*# sourceMappingURL=customize.css.map */

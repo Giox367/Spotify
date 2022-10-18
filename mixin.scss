@@ -85,6 +85,11 @@
     border-radius: 50%;
     overflow: hidden;
 }
+@mixin scroll-bar {
+    height: 300px;
+    overflow-y: scroll;
+    
+}
 
 
 

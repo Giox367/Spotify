@@ -90,3 +90,6 @@ h6 {
 #right-column {
    @include padding-margin-0 
 }
+#playlist {
+@include scroll-bar
+}
