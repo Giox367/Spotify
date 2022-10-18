@@ -96,7 +96,7 @@ h6 {
   right: 0;
   background-color: #111;
   overflow-x: hidden;
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+  transition: 0.5s;
 }
 
 .closebtn {
@@ -106,7 +106,7 @@ h6 {
   cursor: pointer;
 }
 
-.openbtn {
+.openbtn, .dropbtn {
   position: relative;
   top: 0;
   left: 10;
@@ -114,6 +114,25 @@ h6 {
   background: none;
   cursor: pointer;
   color: lightgray;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(54, 54, 54);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.show {
+  display: flex;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=customize.css.map */

@@ -1,7 +1,10 @@
 function openNav() {
-  document.getElementById("mySidebar").style.width = "200px";
+  document.getElementById("sidebar-right").style.width = "200px";
 }
 
 function closeNav() {
-  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("sidebar-right").style.width = "0";
+}
+function dropDotMenu() {
+  document.getElementById("dotMenu").classList.toggle("show");
 }
