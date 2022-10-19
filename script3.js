@@ -32,63 +32,46 @@ let arrayFetch = [
   "https://striveschool-api.herokuapp.com/api/deezer/album/98745",
 ];
 
-let randFetch = Math.floor(Math.random() * arrayFetch.length);
-let randValue = arrayFetch[randFetch];
-let arrayFetchIter = [];
-
-console.log(randValue);
-window.onload = function () {
-  getFetchAll(); //1 Al caricamento della pagina faccio una fetch all'API
-};
-
-async function getFetchAll() {
-  console.log(randValue);
-
-  //2 creo una variabile che contega la rispota dell'api
-  let fetchRequest = await fetch(randValue); //qui ho un "oggetto" html
-
-  console.log(fetchRequest);
-  //essendo che mi serve una risposta in json la devo far "interpretare"
-  let response = await fetchRequest.json(); //ora ho un file json
-  console.log(response);
-  arrayFetchIter.push(response);
-  //3 La mostro a schermo
-  fetchDisplay(arrayFetchIter);
+function randFetch() {
+  let fetchIndex = Math.floor(Math.random() * arrayFetch.length);
+  return fetchIndex;
 }
 
-//3 La mostro a schermo
-function fetchDisplay(arrayFetchIter) {
-  //prendo la fetch request e la stampo sul container
-  let display = document.querySelector("#first");
-  //svuoto il contetnuto per la funzione di ricerca che implementerò
-  //   display.innerHTML = "";
-  console.log(arrayFetchIter);
-  for (const res of arrayFetchIter) {
-    display.innerHTML = `<div class="raw d-flex ">
+let arrayFetchIter = [];
+let resArray = [];
+let arrayFetchLast = [];
+
+window.onload = async function () {
+  await getFetchThird(); //1 Al caricamento della pagina faccio una fetch all'API
+};
+
+async function callFetch() {
+  let fetchRequest = await fetch(arrayFetch[randFetch()]);
+  let response = await fetchRequest.json();
+  return response; //arrayFetch,
+}
+
+async function getFetchThird() {
+  for (let element of arrayFetch) {
+    console.log(element);
+    element = await callFetch();
+    arrayFetchLast.push(element);
+    fetchDisplayAll(arrayFetchLast);
+  }
+}
+
+async function fetchDisplayAll(arrayFetchLast) {
+  let display = document.querySelector(".container > #third");
+
+  for (const res of arrayFetchLast) {
+    display.innerHTML += `<div class="row">
+    <div class="col-md-12">
             <div>
-                <img src="${res.cover_medium}">
+                <img src="${res.cover_small}">
             </div>
             <div>
                 <div>${res.title}</div>
                 <div>
-                  <div>${res.artist.name}</div> 
-                </div>
-                <div>
-                    <div> Ascolta album</div>
-                </div>
-                <div>
-                <button class="btn " type="button"">
-                <img src="./node_modules/bootstrap-icons/icons/play-circle-fill.svg">
-
-              </button>
-              <button class="btn " type="button" >
-              
-              <img src="./node_modules/bootstrap-icons/icons/heart-fill.svg">
-
-            </button>
-                    <button class="btn " type="button">
-                    <img src="./node_modules/bootstrap-icons/icons/three-dots.svg">
-                  </button>
                 </div>
             </div>
         </div>`;
