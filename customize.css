@@ -187,10 +187,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  font-size: 12px;
 }
 
 .progress {
-  height: 8px;
+  height: 7px;
   width: 350px;
 }
 
@@ -210,6 +211,33 @@ body {
 
 #play-button {
   width: 24px;
+}
+
+#volume {
+  width: 50px;
+  height: 7px;
+  background-color: white;
+}
+
+#controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+#player {
+  background-color: #191919;
+  color: lightgrey;
+  border-top: 1px solid gray;
+}
+
+#progress-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 12px;
 }
 
 /*# sourceMappingURL=customize.css.map */
