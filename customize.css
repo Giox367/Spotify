@@ -240,4 +240,14 @@ body {
   font-size: 12px;
 }
 
+#main-content {
+  background-color: #191919;
+}
+
+#side-left, #album, #controls {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 /*# sourceMappingURL=customize.css.map */
