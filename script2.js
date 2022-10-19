@@ -70,7 +70,7 @@ async function getFetchSecond() {
 
 function fetchDisplayCard(arrayFetchIter) {
   //prendo la fetch request e la stampo sul container
-  let display = document.querySelector(".container > #second");
+  let display = document.querySelector(".container > #second ");
   //svuoto il contetnuto per la funzione di ricerca che implementerò
   //   display.innerHTML = "";
   console.log(arrayFetchIter);
@@ -78,15 +78,21 @@ function fetchDisplayCard(arrayFetchIter) {
     let res = arrayFetchIter[index];
     resArray.push(res);
     // for (const iterator of resArray) {
-    display.innerHTML += `<div class="raw d-flex">
-            <div>
-                <img src="${res.cover_small}">
+    display.innerHTML += `
+    <div class="col-4">
+      <div class="card mb-1" style="max-width: 540px;">
+        <div class="row">
+          <div class="col-md-4">
+            <img src="${res.cover_small}" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+             <p class="card-title">${res.title}</p>
             </div>
-            <div>
-                <div>${res.title}</div>
-            </div>
-          </div>`;
-    // }
+          </div>
+        </div>
+      </div>
+    </div>`;
   }
 }
 

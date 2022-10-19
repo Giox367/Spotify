@@ -64,7 +64,7 @@ function fetchDisplay(arrayFetchIter) {
   //   display.innerHTML = "";
   console.log(arrayFetchIter);
   for (const res of arrayFetchIter) {
-    display.innerHTML = `<div class="raw d-flex ">
+    display.innerHTML = `<div class=" d-flex ">
             <div>
                 <img src="${res.cover_medium}">
             </div>
