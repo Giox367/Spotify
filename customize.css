@@ -84,7 +84,7 @@ h6 {
 }
 
 #playlist {
-  height: 100vh;
+  height: 400px;
   overflow-y: scroll;
 }
 
@@ -127,7 +127,7 @@ img {
 }
 
 .sidebar {
-  height: 100vh;
+  height: 100%;
   width: 0;
   position: fixed;
   top: 0;
@@ -244,19 +244,10 @@ body {
   background-color: #191919;
 }
 
-#album, #controls {
+#side-left, #album, #controls {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-#playlist a,
-#icon-square a,
-#list-menu a,
-#list-menu button {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 /*# sourceMappingURL=customize.css.map */
