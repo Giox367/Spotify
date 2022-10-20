@@ -8,7 +8,3 @@ function closeNav() {
 function dropDotMenu() {
   document.getElementById("dotMenu").classList.toggle("show");
 }
-
-function openSubMenu() {
-  document.getElementById("sub-list").classList.toggle("show");
-}
