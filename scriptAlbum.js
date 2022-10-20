@@ -27,18 +27,6 @@ function fetchDisplayAlbum(arrayFetchAlbum) {
     let res = arrayFetchAlbum[index];
     resAlbum.push(res);
     console.log(res);
-    /*
-     let arrayTracks =resAlbum.map((tracks) => {
-       return
-        `<div class="track-album">
-            <div class="track-title">tracks.data.title</div>
-            <div class="track-rank">tracks.data.rank</div>
-            <div class="track-duration">tracks.data.duration</div>
-
-        </div>
-        return tracks.data.title;
-     }
-    }*/
 
     displayAlbum.innerHTML = `
         <div class="card mb-3 d-flex" >
