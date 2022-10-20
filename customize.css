@@ -1,17 +1,227 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 2 | @import "./mixin.scss";
- *   |         ^^^^^^^^^^^^^^
- *   '
- *   customize.scss 2:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 2 \2502  @import \"./mixin.scss\";\d\a   \2502          ^^^^^^^^^^^^^^\a   \2575 \a   customize.scss 2:9  root stylesheet";
+#dot-icon {
+  margin-bottom: 8px;
 }
+
+#list-menu {
+  margin-bottom: 2em;
+}
+
+nav,
+#icon-square,
+.friend-status,
+#playlist > p {
+  color: lightgray;
+  font-size: 12px;
+}
+
+.square {
+  background-color: lightgrey;
+  color: black;
+  border-radius: 2px;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-menu {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.square > svg {
+  width: 12px;
+  overflow: hidden;
+}
+
+#icon-square,
+#list-menu {
+  line-height: 30px;
+}
+
+a, #playlist > p {
+  text-decoration: none;
+  cursor: pointer;
+  color: lightgray;
+}
+
+.button-menu:hover,
+h5:hover,
+a:hover,
+#icone-side-r:hover,
+#playlist > p:hover {
+  color: white;
+}
+
+hr,
+h6,
+#icone-side-r,
+#playlist > p {
+  color: lightgray;
+}
+
+svg {
+  width: 16px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+.description-content,
+.description-content > svg {
+  font-size: 10px;
+  width: 10px;
+}
+
+#playlist {
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+#right-column {
+  padding: 0px;
+  margin: 0px;
+}
+
+.friend-status {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding-inline: 5px;
+  margin-bottom: 2em;
+}
+
+#icone-side-r {
+  display: flex;
+}
+
+img {
+  background-color: aqua;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#attivita-amici {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 5px;
+  margin-bottom: 1.5em;
+  padding-inline: 5px;
+}
+
+#icone-side-r svg {
+  margin-inline: 3px;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.closebtn {
+  cursor: pointer;
+}
+
+.openbtn, .dropbtn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: lightgray;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  visibility: hidden;
+  position: absolute;
+  background-color: rgb(54, 54, 54);
+  min-width: 200px;
+  min-height: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.content-a {
+  text-align: left;
+  line-height: 35px;
+  display: block;
+  padding-left: 15px;
+}
+
+.arrow {
+  color: whitesmoke;
+  margin-left: 130px;
+  font-size: 25px;
+  pointer-events: none;
+}
+
+svg {
+  vertical-align: unset;
+}
+
+.subMenu {
+  display: none;
+  position: absolute;
+  background-color: rgb(54, 54, 54);
+  min-width: 200px;
+  min-height: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  margin-left: 200px;
+  margin-top: 50px;
+}
+
+.show {
+  display: flex;
+  flex-direction: column;
+  visibility: visible;
+}
+
+@media (max-width: 376px) {
+  nav {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    margin-top: 158%;
+    min-width: 97%;
+    background-color: black;
+    justify-content: space-evenly;
+    overflow: hidden;
+  }
+  #list-menu {
+    border: 2px solid red;
+    display: flex;
+    flex: 1;
+    margin-inline: 10px;
+  }
+  #list-menu a {
+    margin-inline: 10px;
+  }
+  button {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=customize.css.map */
