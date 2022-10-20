@@ -13,11 +13,218 @@
   <body>
     <div id="container" class="container-fluid">
       <div class="row d-flex">
-        <div class="col-3 bg-primary">sidebar l</div>
-        <div class="col-7 bg-success">main</div>
-        <div class="col-2 bg-secondary">sidebar r</div>
+        <!--inizio side left-->
+        <div id="sidebar-left"class="col-3 bg-black">
+          <div id="menu-sidebar">
+            <nav>
+              <!--dot inizio-->
+              <div class="dropdown">
+                <button onclick="dropDotMenu()" class="dropbtn"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                  <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                </svg>
+              </button>
+                <div id="dotMenu" class="dropdown-content">
+                  <a class="content-a" href="#" onclick="openNav()">Link 1</a>
+                  <a class="content-a" href="#">Link 2</a>
+                  <a class="content-a" href="#" onclick="openSubMenu()">Link 3
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="arrow bi-caret-right-fill" id="arrow-r" viewBox="0 0 16 16">
+                      <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                       </svg>
+                      </a>
+                        <div class="subMenu"id="sub-list">
+                          <a class="content-a" href="">link 4</a>
+                          <a class="content-a" href="">link 5</a>
+                          <a class="content-a" href="">link 6</a>
+                      </div>
+                   
+                </div>
+              </div>
+              
+              
+              <!--dot inizio-->
+              <div id="list-menu">
+                <div>
+                  <button class="button-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                      <path
+                        d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"
+                      />
+                    </svg>
+                    <a href="#">Home</a>
+                  </button>
+                </div>
+                <div>
+                  <button class="button-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                      <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                      />
+                    </svg>
+                    <a href="#">Cerca</a>
+                  </button>
+                </div>
+                <div>
+                  <button class="button-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-collection-fill" viewBox="0 0 16 16">
+                      <path
+                        d="M0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zM2 3a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11A.5.5 0 0 0 2 3zm2-2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7A.5.5 0 0 0 4 1z"
+                      />
+                    </svg>
+                    <a href="#">La tua libreria</a>
+                  </button>
+                </div>
+              </div>
+            </nav>
+            <div id="icon-square">
+              <div>
+                <button class="button-menu">
+                  <div class="square">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                      <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                    </svg>
+                  </div>
+                  <a href="#">Crea la tua playlist</a>
+                </button>
+              </div>
+              <div>
+                <button class="button-menu">
+                  <div class="square">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                    </svg>
+                  </div>
+                  <a href="#">Brani che ti piacciono</a>
+                </button>
+              </div>
+              <div>
+                <button class="button-menu">
+                  <div class="square">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-bookmark-fill" viewBox="0 0 16 16">
+                      <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z" />
+                    </svg>
+                  </div>
+
+                  <a href="#">I tuoi</a>
+                </button>
+              </div>
+            </div>
+            <hr />
+          </div>
+          <div id="playlist">
+            <a href=""></a><p>lorem ipsum</p></a>
+            <a href=""></a><p>lorem ipsum</p></a>
+            <a href=""></a><p>lorem ipsum</p></a>
+            <a href=""></a><p>lorem ipsum</p></a>
+            <a href=""></a><p>lorem ipsum</p></a>
+            <a href=""></a><p>lorem ipsum</p></a>
+            <a href=""></a><p>lorem ipsum</p></a>
+            <a href=""></a><p>lorem ipsum</p></a>
+            <a href=""></a><p>lorem ipsum</p></a>
+            <a href=""></a><p>lorem ipsum</p></a>
+            <a href=""></a><p>lorem ipsum</p></a>
+            <a href=""></a><p>lorem ipsum</p></a>
+            <a href=""></a><p>lorem ipsum</p></a>
+            <a href=""></a><p>lorem ipsum</p></a>
+            <a href=""></a><p>lorem ipsum</p></a>
+            <a href=""></a><p>lorem ipsum</p></a>
+            <a href=""></a><p>lorem ipsum</p></a>
+            <a href=""></a><p>lorem ipsum</p></a>
+            <a href=""></a><p>lorem ipsum</p></a>
+            <a href=""></a><p>lorem ipsum</p></a>
+            <a href=""></a><p>lorem ipsum</p></a>
+            <a href=""></a><p>lorem ipsum</p></a>
+            <a href=""></a><p>lorem ipsum</p></a>
+            <a href=""></a><p>lorem ipsum</p></a>
+            <a href=""></a><p>lorem ipsum</p></a>
+            <a href=""></a><p>lorem ipsum</p></a>
+            
+          </div>
+        </div>
+        <!--fine side left-->
+        <div id="col-9"class="col-9 bg-success">
+          <div id="sidebar-right" class="sidebar">
+           
+           
+         
+          
+          
+          
+            <div id="attivita-amici"><h6>Attività amici</h6>
+            <div id="icone-attivita-amici"><button class="openbtn" ><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+              <path
+                d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"
+              />
+            </svg></button>
+            <a href="" class="closebtn" onclick="closeNav()"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+              <path
+                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+              />
+            </svg></a></div></div>
+            
+         
+
+           
+          <section class="friend-status">
+            <div class="image" style="display: flex"><img src="" alt="" /></div>
+            <div class="title-content">
+              Charlie Hookhman <br />
+              <span class="description-content"
+                >In Camera &middot Youmi Zouma <br />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-disc-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-6 0a2 2 0 1 0-4 0 2 2 0 0 0 4 0zM4 8a4 4 0 0 1 4-4 .5.5 0 0 0 0-1 5 5 0 0 0-5 5 .5.5 0 0 0 1 0zm9 0a.5.5 0 1 0-1 0 4 4 0 0 1-4 4 .5.5 0 0 0 0 1 5 5 0 0 0 5-5z"
+                  />
+                </svg>
+                EP III
+              </span>
+            </div>
+
+            <div class="time">4 ore</div>
+          </section>
+          <section class="friend-status">
+            <div class="image" style="display: flex"><img src="" alt="" /></div>
+            <div class="title-content">
+              Lightdark02 <br />
+              <span class="description-content"
+                >Aimed to kill &middot Jade LeMac <br />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-disc-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-6 0a2 2 0 1 0-4 0 2 2 0 0 0 4 0zM4 8a4 4 0 0 1 4-4 .5.5 0 0 0 0-1 5 5 0 0 0-5 5 .5.5 0 0 0 1 0zm9 0a.5.5 0 1 0-1 0 4 4 0 0 1-4 4 .5.5 0 0 0 0 1 5 5 0 0 0 5-5z"
+                  />
+                </svg>
+                Aimed to kill
+              </span>
+            </div>
+
+            <div class="time">8 ore</div>
+          </section>
+          <section class="friend-status">
+            <div class="image" style="display: flex"><img src="" alt="" /></div>
+            <div class="title-content">
+              Valeria Traverso <br />
+              <span class="description-content"
+                >New Kings &middot Sleeping Wolf <br />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
+                  <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z" />
+                  <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z" />
+                  <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z" />
+                </svg>
+                Twint Badass mood
+              </span>
+            </div>
+
+            <div class="time">3 giorni</div>
+          </section>
+        </div>
+        
+          
+          
+       
+        </div> 
+        
+        
       </div>
-      <div class="row sticky-bottom p-3 bg-danger">player</div>
+      <div id="player-bar"class="row sticky-bottom p-3 bg-danger">player</div>
     </div>
 
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

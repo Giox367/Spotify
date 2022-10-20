@@ -1,4 +1,213 @@
 // @import "./node_modules/bootstrap/scss/bootstrap.scss";
-#container  {
-    height: 100%;
+@import "./mixin.scss";
+
+#dot-icon {
+  @include mb-8px;
 }
+
+#list-menu {
+  @include mb-2em;
+}
+
+nav,
+#icon-square,
+.friend-status,
+#playlist > p  {
+  @include text-lightgray;
+}
+
+.square {
+  @include square-box;
+}
+
+.button-menu {
+  @include button-menu;
+}
+
+.square > svg {
+  @include icone-square;
+}
+
+#icon-square,
+#list-menu {
+  @include line-height;
+}
+
+a, #playlist>p {
+  @include style-link;
+}
+
+.button-menu:hover,
+h5:hover,
+a:hover,
+#icone-side-r:hover,
+#playlist>p:hover {
+  @include color-white;
+}
+
+hr,
+h6,
+#icone-side-r,
+#playlist>p {
+  @include color-lightgray;
+}
+
+svg {
+  @include icone-no-square;
+}
+
+
+h6 {
+    @include h6-size;
+}
+
+.description-content,
+.description-content > svg {
+    font-size: 10px;
+    width: 10px;
+}
+#playlist {
+    @include scroll-bar
+}
+ #right-column {
+     @include padding-margin-0 
+ }
+ .friend-status {
+     @include friend-banner;
+    
+     
+ }
+ #icone-side-r {
+     @include d-flex
+ }
+
+ img {
+     @include round-img;
+ }
+ #attivita-amici {
+     @include attivita-amici;
+    
+ }
+ #icone-side-r svg {
+   @include margin-i-3px;
+ }
+.sidebar {
+    height: 100%; 
+    width: 0;
+    position: fixed; 
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden; 
+    transition: 0.5s; 
+  }
+   .closebtn {
+    cursor: pointer;
+  }
+  .openbtn, .dropbtn {
+    border: none;
+    background: none;
+	  cursor: pointer;
+    color: lightgray;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-content {
+    visibility: hidden;
+    position: absolute;
+    background-color: rgb(54, 54, 54);
+    min-width: 200px;
+    min-height: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  
+
+  }
+.content-a{
+   text-align:left;
+   line-height: 35px;
+  //  margin-left: 12px;
+   display: block;
+   padding-left: 15px;
+    
+  }
+
+.arrow{
+  color:whitesmoke;
+  margin-left: 130px;
+  font-size: 25px;
+  pointer-events: none;
+}
+svg {
+    vertical-align: unset;
+}
+
+.subMenu {
+  display: none;
+  position: absolute;
+  background-color: rgb(54, 54, 54);
+  min-width: 200px;
+  min-height: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-left: 200px;
+  margin-top: 50px;
+}
+
+.show {
+  display:flex;
+  flex-direction: column;
+  visibility: visible;
+}
+
+
+//MEDIA QUERY
+//smartophone
+@media (max-width: 376px) {
+
+  nav{
+    display:flex;
+    align-items: center;
+    position: absolute;
+    margin-top: 158%;
+    min-width: 97%;
+    background-color: black;
+    justify-content: space-evenly;
+    overflow: hidden;
+   
+  }
+  #list-menu{
+    border: 2px solid red;
+   display: flex;
+   flex: 1;
+   margin-inline: 10px;
+
+   
+  }
+  #list-menu a{
+    margin-inline: 10px;
+  
+  }
+button{
+  display: none;
+}
+
+  }
+
+// // Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) {  }
+
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) { }
+
+// // X-Large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) {  }
+
+// // XX-Large devices (larger desktops, 1400px and up)
+// @media (min-width: 1400px) {  }
+
+  
+  
+ 
