@@ -86,24 +86,27 @@ function displayFirstAlbum(album) {
   firstAlbumContainer.innerHTML = `
   <div class="row">
   
-      <div class="col">
+      <div class="col-4">
           <a class="btn" href="/album.html?id=${album.id}"><img src="${album.cover_medium}"></a>
           </div>
-          <div class="col">
-              <div>${album.title}</div>
+          <div id="annuncio" class="col-8 ">
+          <p>Album</p>
+              <h2>${album.title}</h2>
 
               <div >
                   <p> Ascolta album</p>
               </div>
-              <div>
-                <button class="btn " type="button"">
-                  <img src="./node_modules/bootstrap-icons/icons/play-circle-fill.svg">
+              <div class="banner-button">
+                <button class="btn-green-pillow" type="button"">
+                  Play
                 </button>
-                <button class="btn " type="button" >
-                  <img src="./node_modules/bootstrap-icons/icons/heart-fill.svg">
+                <button class="btn-pillow " type="button" >
+                  Salva
                 </button>
-                <button class="btn " type="button">
-                  <img src="./node_modules/bootstrap-icons/icons/three-dots.svg">
+                <button class="btn" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+              </svg>
                 </button>
               </div>
           </div>
