@@ -98,9 +98,12 @@ h6 {
   background-color: #111;
   overflow-x: hidden;
   transition: 0.5s;
+  z-index: 1;
 }
 .closebtn {
   cursor: pointer;
+  border: none;
+    background: none;
 }
 .openbtn,
 .dropbtn {
@@ -189,7 +192,7 @@ body {
   font-size: 12px;
 }
 #main-content {
-  background-color: #191919;
+  background: linear-gradient(186deg, rgba(42,42,42,1) 0%, rgba(0,0,0,1) 100%);
   color: white;
 }
 
@@ -237,6 +240,7 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  padding-right: 1rem;
 }
 #user-profile img {
   background-color: aqua;
@@ -258,6 +262,12 @@ body {
 .artist-title {
   position: relative;
   top: 60%;
+}
+#topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 //-----------------

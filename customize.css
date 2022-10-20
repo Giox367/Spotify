@@ -108,7 +108,7 @@ h6 {
 }
 
 .image {
-  background-color: aqua;
+  justify-content: center;
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -137,10 +137,13 @@ h6 {
   background-color: #111;
   overflow-x: hidden;
   transition: 0.5s;
+  z-index: 1;
 }
 
 .closebtn {
   cursor: pointer;
+  border: none;
+  background: none;
 }
 
 .openbtn,
@@ -244,7 +247,7 @@ body {
 }
 
 #main-content {
-  background-color: #191919;
+  background: linear-gradient(186deg, rgb(42, 42, 42) 0%, rgb(0, 0, 0) 100%);
   color: white;
 }
 
@@ -297,6 +300,7 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  padding-right: 1rem;
 }
 
 #user-profile img {
@@ -321,6 +325,13 @@ body {
 .artist-title {
   position: relative;
   top: 60%;
+}
+
+#topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .content-a {
