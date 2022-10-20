@@ -7,7 +7,9 @@ window.onload = async function () {
 };
 
 async function callFetch() {
-  let fetchAlbum = await fetch("https://striveschool-api.herokuapp.com/api/deezer/album/75621062");
+  let queryString = new URLSearchParams(window.location.search);
+  let id = queryString.get("album");
+  let fetchAlbum = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${id}`);
   // let fetchRequest = await fetch(arrayFetch[randFetch()]);
   let response = await fetchAlbum.json();
   return response; //arrayFetch,

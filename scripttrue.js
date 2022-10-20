@@ -71,7 +71,7 @@ function displayFirstAlbum(album) {
 
   firstAlbumContainer.innerHTML = `<div class="raw">
           <div>
-              <img src="${album.cover_medium}">
+          <a class="btn" href="/album.html?id=${album.id}"><img src="${album.cover_medium}"></a>
           </div>
           <div>
               <div>${album.title}</div>
@@ -94,7 +94,7 @@ function displayFavoritesAlbums(albums) {
   albums.forEach((album) => {
     display.innerHTML += `<div class="raw d-flex">
             <div>
-                <img src="${album.cover_small}">
+            <a class="btn" href="/album.html?id=${album.id}"><img src="${album.cover_small}"></a>
             </div>
             <div>
                 <div>${album.title}</div>
@@ -108,7 +108,7 @@ function displayAllOtherAlbums(albums) {
   albums.forEach((album) => {
     display.innerHTML += `<div class="raw">
             <div>
-                <img src="${album.cover_medium}">
+                <a class="btn" href="/album.html?id=${album.id}"><img src="${album.cover_medium}"></a>
             </div>
             <div>
                 <div>${album.title}</div>
