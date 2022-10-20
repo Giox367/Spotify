@@ -94,9 +94,18 @@ function displayFirstAlbum(album) {
                   <div> Ascolta album</div>
               </div>
               <div>
-                  <button>Play/Pause</button>
-                  <button>Salva</button>
-                  <button>altre opzioni</button>
+              <button class="btn " type="button"">
+              <img src="./node_modules/bootstrap-icons/icons/play-circle-fill.svg">
+
+            </button>
+            <button class="btn " type="button" >
+            
+            <img src="./node_modules/bootstrap-icons/icons/heart-fill.svg">
+
+          </button>
+                  <button class="btn " type="button">
+                  <img src="./node_modules/bootstrap-icons/icons/three-dots.svg">
+                </button>
               </div>
           </div>
       </div>`;
