@@ -2,15 +2,15 @@
 let arrayFetchAlbum = [];
 let resAlbum = [];
 
-window.onload = async function () {
+window.onload = async () => {
   await getFetchAlbum();
 };
 
 async function callFetch() {
   let queryString = new URLSearchParams(window.location.search);
-  let id = queryString.get("album");
+  let id = queryString.get("id");
+  console.log(queryString);
   let fetchAlbum = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${id}`);
-  // let fetchRequest = await fetch(arrayFetch[randFetch()]);
   let response = await fetchAlbum.json();
   return response; //arrayFetch,
 }
