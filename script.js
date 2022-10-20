@@ -119,7 +119,7 @@ function displayFavoritesAlbums(albums) {
   albums.forEach((album) => {
     display.innerHTML += `
     <div class="col-4">
-    <div class="card mb-1" style="max-width: 540px;">
+    <div class="card mb-1 bg-dark">
       <div class="row">
         <div class="col-md-4">
 
@@ -142,8 +142,8 @@ function displayAllOtherAlbums(albums) {
   let display = document.querySelector("#third > .row");
   albums.forEach((album) => {
     display.innerHTML += `<div class="col-4">
-            <div class="card">
-                <a class="btn" href="/album.html?id=${album.id}"><img src="${album.cover_medium}"></a>
+            <div class="card m-3">
+                <a class="btn" href="/album.html?id=${album.id}"><img style="border-radius:0.8rem" src="${album.cover_medium}"></a>
             
             <div class="card-body">
                 <h6>${album.title}</h6>

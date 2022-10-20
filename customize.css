@@ -364,6 +364,15 @@ body {
   padding-left: 4rem;
 }
 
+.card-body {
+  height: 4rem;
+}
+
+.card {
+  background-color: #292929;
+  border-radius: 0.8rem;
+}
+
 .content-a {
   text-align: left;
   line-height: 35px;
