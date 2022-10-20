@@ -68,8 +68,8 @@ function fetchDisplayAlbum(arrayFetchAlbum) {
                     </div>
                 </div>
         
-            
-            <div class="tracks">
+            </div>
+            <div id="track-of-album" class="tracks">
             <div>
                 ${res.tracks.data
                   .map((track) => {

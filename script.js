@@ -151,6 +151,7 @@ function displayAllOtherAlbums(albums) {
                 <p>${album.artist.name}
                 </p>
             </div>
+            </div>
         </div>`;
   });
 }

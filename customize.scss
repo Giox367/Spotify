@@ -241,8 +241,20 @@ body {
     overflow: hidden;
 
 }
+#playlist p:last-child, 
+#card-album:last-child,
+#track-of-album:last-child{
+  margin-bottom: 100px;
+}
 
-
+#artist-background  {
+  background-size: cover;
+  height: 50vh;
+}
+.artist-title {
+  position: relative;
+  top: 60%;
+}
 
 
 //-----------------
