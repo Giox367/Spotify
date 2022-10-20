@@ -165,6 +165,27 @@ img {
 .show {
   display: flex;
   flex-direction: column;
+  visibility: hidden;
+  position: absolute;
+  background-color: rgb(54, 54, 54);
+  min-width: 200px;
+  min-height: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.content-a {
+  text-align: left;
+  line-height: 35px;
+  display: block;
+  padding-left: 15px;
+}
+
+.arrow {
+  color: whitesmoke;
+  margin-left: 130px;
+  font-size: 25px;
+  pointer-events: none;
 }
 
 svg {
@@ -257,6 +278,49 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.subMenu {
+  display: none;
+  position: absolute;
+  background-color: rgb(54, 54, 54);
+  min-width: 200px;
+  min-height: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  margin-left: 200px;
+  margin-top: 50px;
+}
+
+.show {
+  display: flex;
+  flex-direction: column;
+  visibility: visible;
+}
+
+@media (max-width: 376px) {
+  nav {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    margin-top: 158%;
+    min-width: 97%;
+    background-color: black;
+    justify-content: space-evenly;
+    overflow: hidden;
+  }
+  #list-menu {
+    border: 2px solid red;
+    display: flex;
+    flex: 1;
+    margin-inline: 10px;
+  }
+  #list-menu a {
+    margin-inline: 10px;
+  }
+  button {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=customize.css.map */

@@ -12,7 +12,7 @@
 nav,
 #icon-square,
 .friend-status,
-#playlist>p  {
+#playlist > p  {
   @include text-lightgray;
 }
 
@@ -60,9 +60,6 @@ svg {
 h6 {
     @include h6-size;
 }
-
-
-
 
 .description-content,
 .description-content > svg {
@@ -128,6 +125,30 @@ h6 {
   .show {
     display:flex;
 flex-direction: column;
+    visibility: hidden;
+    position: absolute;
+    background-color: rgb(54, 54, 54);
+    min-width: 200px;
+    min-height: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  
+
+  }
+.content-a{
+   text-align:left;
+   line-height: 35px;
+  //  margin-left: 12px;
+   display: block;
+   padding-left: 15px;
+    
+  }
+
+.arrow{
+  color:whitesmoke;
+  margin-left: 130px;
+  font-size: 25px;
+  pointer-events: none;
 }
 svg {
     vertical-align: unset;
@@ -209,5 +230,73 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   }
+  
+ 
+
+.subMenu {
+  display: none;
+  position: absolute;
+  background-color: rgb(54, 54, 54);
+  min-width: 200px;
+  min-height: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-left: 200px;
+  margin-top: 50px;
+}
+
+.show {
+  display:flex;
+  flex-direction: column;
+  visibility: visible;
+}
+
+
+//MEDIA QUERY
+//smartophone
+@media (max-width: 376px) {
+
+  nav{
+    display:flex;
+    align-items: center;
+    position: absolute;
+    margin-top: 158%;
+    min-width: 97%;
+    background-color: black;
+    justify-content: space-evenly;
+    overflow: hidden;
+   
+  }
+  #list-menu{
+    border: 2px solid red;
+   display: flex;
+   flex: 1;
+   margin-inline: 10px;
+
+   
+  }
+  #list-menu a{
+    margin-inline: 10px;
+  
+  }
+button{
+  display: none;
+}
+
+  }
+
+// // Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) {  }
+
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) { }
+
+// // X-Large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) {  }
+
+// // XX-Large devices (larger desktops, 1400px and up)
+// @media (min-width: 1400px) {  }
+
+  
   
  
