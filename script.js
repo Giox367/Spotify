@@ -96,22 +96,18 @@ function displayFirstAlbum(album) {
                   <p> Ascolta album</p>
               </div>
               <div>
-                         <button class="btn " type="button"">
-                        <img src="./node_modules/bootstrap-icons/icons/play-circle-fill.svg">
-
-                      </button>
-                      <button class="btn " type="button" >
-
-                      <img src="./node_modules/bootstrap-icons/icons/heart-fill.svg">
-
-                    </button>
-                            <button class="btn " type="button">
-                            <img src="./node_modules/bootstrap-icons/icons/three-dots.svg">
-                          </button>
+                <button class="btn " type="button"">
+                  <img src="./node_modules/bootstrap-icons/icons/play-circle-fill.svg">
+                </button>
+                <button class="btn " type="button" >
+                  <img src="./node_modules/bootstrap-icons/icons/heart-fill.svg">
+                </button>
+                <button class="btn " type="button">
+                  <img src="./node_modules/bootstrap-icons/icons/three-dots.svg">
+                </button>
               </div>
           </div>
-          
-      </div>`;
+        </div>`;
 }
 
 function displayFavoritesAlbums(albums) {

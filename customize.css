@@ -245,6 +245,11 @@ body {
 
 #main-content {
   background-color: #191919;
+  color: white;
+}
+
+#main-content button {
+  color: white;
 }
 
 #side-left,

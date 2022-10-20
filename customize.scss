@@ -190,6 +190,11 @@ body {
 }
 #main-content {
   background-color: #191919;
+  color: white;
+}
+
+#main-content button {
+  color: white;
 }
 #side-left,
 #album,
@@ -200,54 +205,53 @@ body {
 }
 .topbar-button {
   color: lightgray;
-    background: black;
-    border-radius: 50%;
-    border: none;
-    width: 25px;
-    height: 25px;
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-    justify-content: center;
-    margin: 5px;
+  background: black;
+  border-radius: 50%;
+  border: none;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  justify-content: center;
+  margin: 5px;
 }
 #topbar-button {
   display: flex;
-    align-items: center;
+  align-items: center;
 }
 #user-topbar {
   display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    font-size: 12px;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 12px;
 }
 #user-profile {
   background-color: black;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    border-radius: 50px;
-    overflow: hidden;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border-radius: 50px;
+  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 #user-profile img {
   background-color: aqua;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    overflow: hidden;
-
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  overflow: hidden;
 }
-#playlist p:last-child, 
+#playlist p:last-child,
 #card-album:last-child,
-#track-of-album:last-child{
+#track-of-album:last-child {
   margin-bottom: 100px;
 }
 
-#artist-background  {
+#artist-background {
   background-size: cover;
   height: 50vh;
 }
@@ -255,7 +259,6 @@ body {
   position: relative;
   top: 60%;
 }
-
 
 //-----------------
 

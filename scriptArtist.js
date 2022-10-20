@@ -55,7 +55,7 @@ async function getFetchArtist() {
   // tracks.data.forEach(() =>
   for (let i = 0; i < tracks.data.length; i++) {
     let div = document.getElementById("song-track");
-    div.innerHTML += `<div class="track-album row"><div class="track-img" col-3 text-center"><img src=${resArtist.picture_small}></div>
+    div.innerHTML += `<div class="track-album row"><div class="track-img col-3 text-center"><img src=${resArtist.picture_small}></div>
     <div class="track-title col-3 text-center"><p>${tracks.data[i].title}</p></div>
     <div class="track-rank col-3 text-center">${tracks.data[i].rank}</div>
     <div class="track-duration col-3 text-center">${tracks.data[i].duration}</div>
