@@ -51,9 +51,7 @@ function fetchDisplayAlbum(arrayFetchAlbum) {
                     <div class="col-md-8">
                         <div class="card-body">
                             <h2 class="title"> ${res.title}</h2>
-                            <a class="btn" href="/artist.html?id=${res.artist.id}"><p class="artist">${res.artist.name} * ${res.release_date} * ${
-      res.nb_tracks
-    }</p>
+                            <a class="btn" href="/artist.html?id=${res.artist.id}"><p class="artist">${res.artist.name} * ${res.release_date} * ${res.nb_tracks}</p></a>
                         </div>
                             <div class="button-group">
                                 <button class="btn " type="button">
@@ -70,7 +68,7 @@ function fetchDisplayAlbum(arrayFetchAlbum) {
                     </div>
                 </div>
         
-            </div>
+            
             <div class="tracks">
             <div>
                 ${res.tracks.data

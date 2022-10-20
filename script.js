@@ -83,51 +83,73 @@ async function getAlbum(url) {
 function displayFirstAlbum(album) {
   let firstAlbumContainer = document.getElementById("first");
 
-  firstAlbumContainer.innerHTML = `<div class="row">
-          <div>
+  firstAlbumContainer.innerHTML = `
+  <div class="row">
+  
+      <div class="col">
           <a class="btn" href="/album.html?id=${album.id}"><img src="${album.cover_medium}"></a>
           </div>
-          <div>
+          <div class="col">
               <div>${album.title}</div>
 
-              <div>
-                  <div> Ascolta album</div>
+              <div >
+                  <p> Ascolta album</p>
               </div>
               <div>
-                  <button>Play/Pause</button>
-                  <button>Salva</button>
-                  <button>altre opzioni</button>
+                         <button class="btn " type="button"">
+                        <img src="./node_modules/bootstrap-icons/icons/play-circle-fill.svg">
+
+                      </button>
+                      <button class="btn " type="button" >
+
+                      <img src="./node_modules/bootstrap-icons/icons/heart-fill.svg">
+
+                    </button>
+                            <button class="btn " type="button">
+                            <img src="./node_modules/bootstrap-icons/icons/three-dots.svg">
+                          </button>
               </div>
           </div>
+          
       </div>`;
 }
 
 function displayFavoritesAlbums(albums) {
-  let display = document.getElementById("second");
+  let display = document.querySelector("#second > .row");
 
   albums.forEach((album) => {
-    display.innerHTML += `<div class="raw d-flex">
-            <div>
+    display.innerHTML += `
+    <div class="col-4">
+    <div class="card mb-1" style="max-width: 540px;">
+      <div class="row">
+        <div class="col-md-4">
+
             <a class="btn" href="/album.html?id=${album.id}"><img src="${album.cover_small}"></a>
+          
             </div>
+            <div class="col-md-8">
+              <div class="card-body">
             <div>
-                <div>${album.title}</div>
-            </div>
+                <p>${album.title}</p>
+            
+          </div>
+          </div>
+          </div>
           </div>`;
   });
 }
 
 function displayAllOtherAlbums(albums) {
-  let display = document.getElementById("third");
+  let display = document.querySelector("#third > .row");
   albums.forEach((album) => {
-    display.innerHTML += `<div class="raw">
-            <div>
+    display.innerHTML += `<div class="col-4">
+            <div class="card">
                 <a class="btn" href="/album.html?id=${album.id}"><img src="${album.cover_medium}"></a>
-            </div>
-            <div>
-                <div>${album.title}</div>
-                <div>
-                </div>
+            
+            <div class="card-body">
+                <h6>${album.title}</h6>
+                <p>${album.artist.name}
+                </p>
             </div>
         </div>`;
   });
