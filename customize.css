@@ -261,7 +261,8 @@ body {
 
 #side-left,
 #album,
-#controls {
+#controls,
+p, h2 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -373,7 +374,7 @@ body {
 }
 
 .card-body {
-  height: 4rem;
+  height: 5rem;
 }
 
 .card {
@@ -540,6 +541,20 @@ svg {
   #topbar-mobile, #topbar-mobile-bottom, #player-mobile {
     display: flex;
   }
+}
+.album-btn {
+  position: relative;
+  top: 1rem !important;
+}
+
+@media screen and (max-width: 768px) {
+  .album-btn {
+    position: relative;
+    top: 2rem !important;
+  }
+}
+.artist {
+  color: lightgray;
 }
 
 /*# sourceMappingURL=customize.css.map */

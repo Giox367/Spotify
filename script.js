@@ -86,10 +86,10 @@ function displayFirstAlbum(album) {
   firstAlbumContainer.innerHTML = `
   <div class="row">
   
-      <div class="col-4">
+      <div class="col-3">
           <a class="btn" href="/album.html?id=${album.id}"><img src="${album.cover_medium}"></a>
           </div>
-          <div id="annuncio" class="col-8 ">
+          <div id="annuncio" class="col-7 offset-2 ">
           <p>Album</p>
               <h2>${album.title}</h2>
 
@@ -117,15 +117,15 @@ function displayFavoritesAlbums(albums) {
   let display = document.querySelector("#second > .row");
 
   albums.forEach((album) => {
-    display.innerHTML += `<div class="col-sm-12 col-lg-6 col-xl-4">
+    display.innerHTML += `<div class="col-xs-6 col-sm-6 col-lg-6 col-xl-4">
     <div class="card mb-1 bg-dark">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-3 col-md-4">
 
             <a class="btn" href="/album.html?id=${album.id}"><img src="${album.cover_small}"></a>
           
             </div>
-            <div class="col-md-8">
+            <div class="col-9 col-md-8">
               <div class="card-body">
             <div>
                 <p>${album.title}</p>
@@ -141,15 +141,15 @@ function displayAllOtherAlbums(albums) {
   let display = document.querySelector("#third > .row");
   albums.forEach((album) => {
     display.innerHTML += `<div class="col-sm-12 col-lg-6 col-xl-4">
-            <div class="card m-1">
-                <a class="btn" href="/album.html?id=${album.id}"><img style="border-radius:0.8rem" src="${album.cover_medium}"></a>
-            
-            <div class="card-body">
-                <h6>${album.title}</h6>
-                <p>${album.artist.name}
-                </p>
-            </div>
-            </div>
-        </div>`;
+    <div class="card m-1">
+        <a class="btn" href="/album.html?id=${album.id}"><img style="border-radius:0.8rem" src="${album.cover_medium}"></a>
+    
+    <div class="card-body  text-center">
+        <h6>${album.title}</h6>
+        <p>${album.artist.name}
+        </p>
+    </div>
+    </div>
+</div>`;
   });
 }
