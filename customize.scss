@@ -152,6 +152,9 @@ body {
   height: 7px;
   width: 350px;
 }
+.progress-bar {
+  background-color: white;
+}
 #commands {
   display: flex;
   flex-direction: column;
@@ -373,7 +376,7 @@ body {
  background-color: #00000075;
  padding-top: 1rem;
 }
-#topbar-mobile-bottom svg {
+#topbar-mobile-bottom svg, #player-mobile svg {
   width: 25px;
 }
 #topbar-mobile svg {
@@ -381,11 +384,32 @@ body {
 }
 #topbar-mobile-bottom {
   display: none;
+  margin: 0 auto;
 }
 .icon-mobile-menu {
   display: flex;
     align-items: center;
     flex-direction: column;
+}
+.track {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+#player-mobile {
+  position: sticky;
+    bottom: 82px;
+    background-color: rgb(58, 58, 58);
+    display: none;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    margin-inline: 0 auto;
+}
+.player-mobile-track {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
 }
 
 
@@ -437,7 +461,7 @@ svg {
 #main-content {
   width: 100%;
 }
-#topbar-mobile, #topbar-mobile-bottom {
+#topbar-mobile, #topbar-mobile-bottom,#player-mobile {
   display: flex;
 }
 }
