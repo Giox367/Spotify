@@ -103,7 +103,7 @@ h6 {
 .closebtn {
   cursor: pointer;
   border: none;
-    background: none;
+  background: none;
 }
 .openbtn,
 .dropbtn {
@@ -192,7 +192,7 @@ body {
   font-size: 12px;
 }
 #main-content {
-  background: linear-gradient(186deg, rgba(42,42,42,1) 0%, rgba(0,0,0,1) 100%);
+  background: linear-gradient(186deg, rgba(42, 42, 42, 1) 0%, rgba(0, 0, 0, 1) 100%);
   color: white;
 }
 
@@ -250,7 +250,7 @@ body {
   overflow: hidden;
 }
 #playlist p:last-child,
-#card-album:last-child,
+#card-album :last-child,
 #track-of-album:last-child {
   margin-bottom: 100px;
 }
@@ -259,9 +259,19 @@ body {
   background-size: cover;
   height: 50vh;
 }
-.artist-title {
+
+#album-background {
+  background-size: cover;
+  height: max-content;
+}
+.artist-title,
+.artist-album {
   position: relative;
   top: 60%;
+}
+
+.artist {
+  color: lightgrey;
 }
 #topbar {
   position: sticky;
@@ -274,7 +284,7 @@ body {
   color: black;
   border-radius: 1.5rem;
   width: 4.6rem;
-  background: #1DB954;
+  background: #1db954;
   border: none;
   font-weight: 700;
   padding-block: 0.3rem;
@@ -293,7 +303,7 @@ body {
   align-items: center;
   gap: 1rem;
 }
-#annuncio{
+#annuncio {
   padding-left: 4rem;
 }
 
@@ -304,7 +314,6 @@ body {
   background-color: #292929;
   border-radius: 0.8rem;
 }
-
 
 //-----------------
 
