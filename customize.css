@@ -464,4 +464,13 @@ svg {
   visibility: visible;
 }
 
+@media screen and (max-width: 576px) {
+  #side-left, #player, #topbar {
+    display: none;
+  }
+  #main-content {
+    width: 100%;
+  }
+}
+
 /*# sourceMappingURL=customize.css.map */

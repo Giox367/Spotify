@@ -396,3 +396,12 @@ svg {
 }
 
 //-----------------
+
+// media query
+
+@media screen and (max-width: 576px) {
+#side-left, #player, #topbar{ display: none;}
+#main-content {
+  width: 100%;
+}
+}
