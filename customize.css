@@ -311,10 +311,13 @@ body {
   overflow: hidden;
 }
 
-#playlist p:last-child,
 #card-album:last-child,
 #track-of-album:last-child {
   margin-bottom: 100px;
+}
+
+#playlist p:last-child {
+  margin-bottom: 21rem;
 }
 
 #artist-background {
