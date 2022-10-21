@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Spotify 2.0" />
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="customize.css" />
+    <title>Spotify</title>
+  </head>
+
+  <body>
+    <div id="container" class="container-fluid">
+      <div class="row d-flex">
+        <!--inizio side left-->
+        <div id="side-left" class="col-3 bg-black">
+          <div id="menu-sidebar">
+            <nav>
+              <!--dot inizio-->
+              <div class="dropdown">
+                <button onclick="dropDotMenu()" class="dropbtn">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                    <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                  </svg>
+                </button>
+                <div id="dotMenu" class="dropdown-content">
+                  <a href="#" onclick="openNav()">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>
+              </div>
+
+              <!--dot inizio-->
+              <div id="list-menu">
+                <div>
+                  <button class="button-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                      <path
+                        d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"
+                      />
+                    </svg>
+                    <a href="./index.html">Home</a>
+                  </button>
+                </div>
+                <div>
+                  <button class="button-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                      <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                      />
+                    </svg>
+                    <a href="#">Cerca</a>
+                  </button>
+                </div>
+                <div>
+                  <button class="button-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-collection-fill" viewBox="0 0 16 16">
+                      <path
+                        d="M0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zM2 3a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11A.5.5 0 0 0 2 3zm2-2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7A.5.5 0 0 0 4 1z"
+                      />
+                    </svg>
+                    <a href="#">La tua libreria</a>
+                  </button>
+                </div>
+              </div>
+            </nav>
+            <div id="icon-square">
+              <div>
+                <button class="button-menu">
+                  <div class="square">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                      <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                    </svg>
+                  </div>
+                  <a href="#">Crea la tua playlist</a>
+                </button>
+              </div>
+              <div>
+                <button class="button-menu">
+                  <div class="square">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                    </svg>
+                  </div>
+                  <a href="#">Brani che ti piacciono</a>
+                </button>
+              </div>
+              <div>
+                <button class="button-menu">
+                  <div class="square">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-bookmark-fill" viewBox="0 0 16 16">
+                      <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z" />
+                    </svg>
+                  </div>
+
+                  <a href="#">I tuoi</a>
+                </button>
+              </div>
+            </div>
+            <hr />
+          </div>
+          <div id="playlist">
+            <p><a href="">Lorem ipsum</a></p>
+            <p><a href="">Lorem ipsum</a></p>
+            <p><a href="">Lorem ipsum</a></p>
+            <p><a href="">Lorem ipsum</a></p>
+            <p><a href="">Lorem ipsum</a></p>
+            <p><a href="">Lorem ipsum</a></p>
+            <p><a href="">Lorem ipsum</a></p>
+            <p><a href="">Lorem ipsum</a></p>
+            <p><a href="">Lorem ipsum</a></p>
+            <p><a href="">Lorem ipsum</a></p>
+            <p><a href="">Lorem ipsum</a></p>
+            <p><a href="">Lorem ipsum</a></p>
+            <p><a href="">Lorem ipsum</a></p>
+            <p><a href="">Lorem ipsum</a></p>
+            <p><a href="">Lorem ipsum</a></p>
+            <p><a href="">Lorem ipsum</a></p>
+            <p><a href="">Lorem ipsum</a></p>
+            <p><a href="">Lorem ipsum</a></p>
+            <p><a href="">Lorem ipsum</a></p>
+            <p><a href="">Lorem ipsum</a></p>
+          </div>
+        </div>
+        <!--fine side left-->
+        <div id="main-content" class="col-9">
+          <div id="topbar" class="row">
+            <div id="topbar-button" class="col"><button class="topbar-button" onClick="javascript:history.back()"><</button><button class="topbar-button">></button></div>
+            <div class="col-6" id="user-topbar">
+              <div id="user-profile">
+                <img
+                  src="data:image/jpeg;base64,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"
+                />Paolo Brosio
+              </div>
+            </div>
+          </div>
+          <div id="topbar-mobile" class="row">
+            <div class="col-8"><h2>Buon pomeriggio</h2></div>
+            <div class="col-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                <path
+                  d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"
+                />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
+                <path
+                  d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z"
+                />
+                <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z" />
+                <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+                <path
+                  d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div id="artistDisplay"></div>
+
+          <div class="banner-button mb-3">
+            <button class="no-border-btn">
+              <svg class="green-round-btn" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z" />
+              </svg>
+            </button>
+            <button class="btn-border-radius" type="button">Following</button>
+            <button class="btn" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+              </svg>
+            </button>
+          </div>
+          <div id="popolari">
+            <h6>Popolari</h6>
+          </div>
+          <div id="song-track"></div>
+
+          <div id="sidebar-right" class="sidebar">
+            <div id="attivita-amici">
+              <h6>Amici di Lidia</h6>
+              <div id="icone-attivita-amici">
+                <button class="openbtn">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"
+                    />
+                  </svg>
+                </button>
+                <a href="" class="closebtn" onclick="closeNav()"
+                  ><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path
+                      d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <section class="friend-status">
+              <div class="image" style="display: flex"><img src="https://ilcaffe.tv/wp-content/uploads/2020/07/10-112723-22-26.jpg" alt="" /></div>
+              <div class="title-content">
+                Pippo <br />
+                <span class="description-content"
+                  >In Camera &middot Youmi Zouma <br />
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-disc-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-6 0a2 2 0 1 0-4 0 2 2 0 0 0 4 0zM4 8a4 4 0 0 1 4-4 .5.5 0 0 0 0-1 5 5 0 0 0-5 5 .5.5 0 0 0 1 0zm9 0a.5.5 0 1 0-1 0 4 4 0 0 1-4 4 .5.5 0 0 0 0 1 5 5 0 0 0 5-5z"
+                    />
+                  </svg>
+                  EP III
+                </span>
+              </div>
+
+              <div class="time">4 ore</div>
+            </section>
+            <section class="friend-status">
+              <div class="image" style="display: flex">
+                <img src="https://1.bp.blogspot.com/-og6K3eOl89s/X2y9mpfwBqI/AAAAAAAAF2w/1aPIflkrI60qMXXYRfDDj2MlLKCwYh3pQCLcBGAsYHQ/s1920/miky.jpg" alt="" />
+              </div>
+              <div class="title-content">
+                Topolino <br />
+                <span class="description-content"
+                  >Aimed to kill &middot Jade LeMac <br />
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-disc-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-6 0a2 2 0 1 0-4 0 2 2 0 0 0 4 0zM4 8a4 4 0 0 1 4-4 .5.5 0 0 0 0-1 5 5 0 0 0-5 5 .5.5 0 0 0 1 0zm9 0a.5.5 0 1 0-1 0 4 4 0 0 1-4 4 .5.5 0 0 0 0 1 5 5 0 0 0 5-5z"
+                    />
+                  </svg>
+                  Aimed to kill
+                </span>
+              </div>
+
+              <div class="time">8 ore</div>
+            </section>
+            <section class="friend-status">
+              <div class="image" style="display: flex"><img src="https://static.fanpage.it/wp-content/uploads/sites/6/2021/04/dolan-meme.jpg" alt="" /></div>
+              <div class="title-content">
+                Paperino <br />
+                <span class="description-content"
+                  >New Kings &middot Sleeping Wolf <br />
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
+                    <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z" />
+                    <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z" />
+                    <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z" />
+                  </svg>
+                  Twint Badass mood
+                </span>
+              </div>
+
+              <div class="time">3 giorni</div>
+            </section>
+          </div>
+          <div id="player-mobile" class="row">
+            <div class="col track">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-disc-fill" viewBox="0 0 16 16">
+                <path
+                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-6 0a2 2 0 1 0-4 0 2 2 0 0 0 4 0zM4 8a4 4 0 0 1 4-4 .5.5 0 0 0 0-1 5 5 0 0 0-5 5 .5.5 0 0 0 1 0zm9 0a.5.5 0 1 0-1 0 4 4 0 0 1-4 4 .5.5 0 0 0 0 1 5 5 0 0 0 5-5z"
+                />
+              </svg>
+              <p>Heat Waves</p>
+            </div>
+            <div class="col player-mobile-track">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-speaker" viewBox="0 0 16 16">
+                <path d="M12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h8zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z" />
+                <path d="M8 4.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5zM8 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 3a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-3.5 1.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-suit-heart" viewBox="0 0 16 16">
+                <path
+                  d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"
+                />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+                <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z" />
+              </svg>
+            </div>
+          </div>
+          <div id="topbar-mobile-bottom" class="row">
+            <div class="col-4 icon-mobile-menu">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                <path
+                  d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"
+                />
+              </svg>
+              <p>Home</p>
+            </div>
+            <div class="col-4 icon-mobile-menu">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                />
+              </svg>
+              <p>Cerca</p>
+            </div>
+            <div class="col-4 icon-mobile-menu">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-collection" viewBox="0 0 16 16">
+                <path
+                  d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13z"
+                />
+              </svg>
+              <p>La tua libreria</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--inizio player-->
+      <div id="player" class="row sticky-bottom">
+        <!--album inizio-->
+        <div id="album" class="col-2">
+          <div><img src="" alt="" /></div>
+          <div class="title-content">
+            Fat Funny Friend <br />
+            <span class="description-content">Maddie Zahm</span>
+          </div>
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+              <path
+                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"
+              />
+            </svg>
+          </div>
+        </div>
+        <!--album fine-->
+        <!--commands inizio-->
+        <div id="commands" class="col-8">
+          <div id="buttons-player">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
+              <path
+                fill-rule="evenodd"
+                d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"
+              />
+              <path
+                d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"
+              />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-skip-start-fill" viewBox="0 0 16 16">
+              <path d="M4 4a.5.5 0 0 1 1 0v3.248l6.267-3.636c.54-.313 1.232.066 1.232.696v7.384c0 .63-.692 1.01-1.232.697L5 8.753V12a.5.5 0 0 1-1 0V4z" />
+            </svg>
+            <svg id="play-button" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-skip-end-fill" viewBox="0 0 16 16">
+              <path d="M12.5 4a.5.5 0 0 0-1 0v3.248L5.233 3.612C4.693 3.3 4 3.678 4 4.308v7.384c0 .63.692 1.01 1.233.697L11.5 8.753V12a.5.5 0 0 0 1 0V4z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-repeat" viewBox="0 0 16 16">
+              <path
+                d="M11 5.466V4H5a4 4 0 0 0-3.584 5.777.5.5 0 1 1-.896.446A5 5 0 0 1 5 3h6V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192Zm3.81.086a.5.5 0 0 1 .67.225A5 5 0 0 1 11 13H5v1.466a.25.25 0 0 1-.41.192l-2.36-1.966a.25.25 0 0 1 0-.384l2.36-1.966a.25.25 0 0 1 .41.192V12h6a4 4 0 0 0 3.585-5.777.5.5 0 0 1 .225-.67Z"
+              />
+            </svg>
+          </div>
+          <div id="progress-bar">
+            2.00
+            <div class="progress">
+              <div class="progress-bar w-75" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            5.00
+          </div>
+        </div>
+        <!--commands fine-->
+        <!--controls inizio-->
+        <div id="controls" class="col-2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-mic" viewBox="0 0 16 16">
+            <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z" />
+            <path d="M10 8a2 2 0 1 1-4 0V3a2 2 0 1 1 4 0v5zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path
+              fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+            />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-speaker" viewBox="0 0 16 16">
+            <path d="M12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h8zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z" />
+            <path d="M8 4.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5zM8 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 3a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-3.5 1.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-volume-up" viewBox="0 0 16 16">
+            <path d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z" />
+            <path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z" />
+            <path
+              d="M10.025 8a4.486 4.486 0 0 1-1.318 3.182L8 10.475A3.489 3.489 0 0 0 9.025 8c0-.966-.392-1.841-1.025-2.475l.707-.707A4.486 4.486 0 0 1 10.025 8zM7 4a.5.5 0 0 0-.812-.39L3.825 5.5H1.5A.5.5 0 0 0 1 6v4a.5.5 0 0 0 .5.5h2.325l2.363 1.89A.5.5 0 0 0 7 12V4zM4.312 6.39 6 5.04v5.92L4.312 9.61A.5.5 0 0 0 4 9.5H2v-3h2a.5.5 0 0 0 .312-.11z"
+            />
+          </svg>
+          <div id="volume" class="progress">
+            <div class="progress-bar" role="progressbar" aria-label="Basic example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrows-angle-expand" viewBox="0 0 16 16">
+            <path
+              fill-rule="evenodd"
+              d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707z"
+            />
+          </svg>
+        </div>
+        <!--controls fine-->
+      </div>
+      <!--fine player-->
+    </div>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./scriptArtist.js"></script>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+@mixin text-lightgray {
+    color:  lightgray;
+    font-size: 12px;
+};
+
+@mixin square-box {
+   background-color: lightgrey;
+   color: black;
+   border-radius: 2px;
+   width: 16px;
+   height: 16px;
+   display: flex;
+   align-items: center;
+   justify-content: center; 
+}
+@mixin button-menu {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    display: flex;
+    align-items: center;
+  gap: 1em;
+}
+@mixin style-link {
+   text-decoration: none;
+   cursor: pointer;
+   color: lightgray;
+}
+@mixin icone-no-square {
+    width: 16px;
+}
+@mixin mb-8px {
+    margin-bottom: 8px;
+}
+@mixin mb-2em {
+    margin-bottom: 2em;
+}
+@mixin icone-square {
+    width: 12px;
+    overflow: hidden;
+}
+@mixin line-height {
+    line-height: 30px;
+}
+@mixin color-white {
+    color: white;
+}
+@mixin color-lightgray {
+    color: lightgray;
+}
+@mixin margin-i-3px {
+    margin-inline: 3px;
+}
+@mixin h6-size {
+    font-size: 14px;
+}
+@mixin attivita-amici {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 1.5em;
+    padding-inline: 5px;
+}
+@mixin d-flex {
+    display: flex;  
+}
+@mixin friend-banner {
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-inline: 5px;
+    margin-bottom: 2em
+  
+}
+@mixin padding-margin-0 {
+    padding: 0px;
+    margin: 0px;
+}
+@mixin round-img {
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+@mixin scroll-bar {
+    height: 100vh;
+    overflow-y: scroll;   
+}
+
+
+
+
