@@ -144,9 +144,9 @@ function displayAllOtherAlbums(albums) {
             <div class="card m-1">
                 <a class="btn" href="/album.html?id=${album.id}"><img style="border-radius:0.8rem" src="${album.cover_medium}"></a>
             
-            <div class="card-body">
+            <div class="card-body p-3 text-center">
                 <h6>${album.title}</h6>
-                <p>${album.artist.name}
+                <p p-2>${album.artist.name}
                 </p>
             </div>
             </div>
