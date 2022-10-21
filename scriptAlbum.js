@@ -51,11 +51,11 @@ function fetchDisplayAlbum(arrayFetchAlbum) {
                     <div class="col-md-8">
                         <div class="card-body">
                             <h2 class="title"> ${res.title}</h2>
-                            <a class="btn" href="/artist.html?id=${res.artist.id}"><p class="artist">${res.artist.name} * ${res.release_date} * ${res.nb_tracks}</p></a>
+                            <a class="btn" href="/artist.html?id=${res.artist.id}"><p class="artist">${res.artist.name} * ${res.release_date} * ${
+      res.nb_tracks
+    }</p></a>
                         </div>
-                        <div class="button-group" style="position: relative;
-                        top: 4rem;
-                        left: 5%">
+                        <div class="button-group album-btn" >
                         <button class="btn" style="color: #1db954; font-size:3rem" type="button">
 
                         <svg class="green-round-btn" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play-circle-fill" viewBox="0 0 16 16">

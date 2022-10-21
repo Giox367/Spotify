@@ -355,6 +355,10 @@ body {
   bottom: 4rem;
 }
 
+.artist {
+  color: lightgrey;
+}
+
 //-----------------
 
 // sidebar simone
@@ -394,6 +398,11 @@ svg {
   visibility: visible;
 }
 
+.album-btn {
+  position: relative;
+  top: 4rem;
+  left: 5%;
+}
 //-----------------
 
 // media query
@@ -406,5 +415,16 @@ svg {
   }
   #main-content {
     width: 100%;
+  }
+  .album-btn {
+    position: relative;
+    top: 1rem !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .album-btn {
+    position: relative;
+    top: 2rem !important;
   }
 }
