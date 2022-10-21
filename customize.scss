@@ -120,9 +120,10 @@ h6 {
   display: none;
   position: absolute;
   background-color: rgb(54, 54, 54);
-  min-width: 160px;
+  min-width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  
 }
 .show {
   display: flex;
@@ -309,18 +310,26 @@ body {
 //-----------------
 
 // sidebar simone
+.raw{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 20px;
+}
 .content-a {
-  text-align: left;
   line-height: 35px;
   //  margin-left: 12px;
-  display: block;
-  padding-left: 15px;
+  display: flex;
+ 
 }
 
 .arrow {
+ 
+  display: flex;
   color: whitesmoke;
-  margin-left: 130px;
-  font-size: 25px;
+  justify-content:center;
+   margin-left: 35px;
+  // font-size: 25px;
   pointer-events: none;
 }
 svg {
@@ -331,12 +340,16 @@ svg {
   display: none;
   position: absolute;
   background-color: rgb(54, 54, 54);
-  min-width: 200px;
+  min-width: 250px;
   min-height: 120px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  margin-left: 200px;
-  margin-top: 50px;
+  z-index: 999999;
+  margin-left: 205px;
+  margin-top: 75px;
+}
+
+.list-a{
+  margin-left: 20px;
 }
 
 .show {
@@ -346,3 +359,17 @@ svg {
 }
 
 //-----------------
+// `sm` applies to x-small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { }
+
+// `md` applies to small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {  }
+
+// `lg` applies to medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {  }
+
+// `xl` applies to large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { }
+
+// `xxl` applies to x-large devices (large desktops, less than 1400px)
+@media (max-width: 1399.98px) {  }
