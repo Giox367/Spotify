@@ -1,45 +1,107 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Spotify 2.0" />
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="customize.css" />
-    <title>Spotify</title>
-  </head>
+ 
 
-  <body>
-    <div id="container" class="container-fluid">
-      <div class="row d-flex">
-        <!--inizio side left-->
-        <div id="side-left" class="col-3 bg-black">
-          <div id="menu-sidebar">
-            <nav>
-              <!--dot inizio-->
-              <div class="dropdown">
-                <button onclick="dropDotMenu()" class="dropbtn">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
-                    <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Spotify 2.0" />
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="customize.css" />
+  <title>Spotify</title>
+</head>
+
+<body>
+  <div id="container" class="container-fluid">
+    <div class="row d-flex">
+      <!--inizio side left-->
+      <div id="side-left" class="col-3 bg-black">
+        <div id="menu-sidebar">
+          <nav>
+            <!--dot inizio-->
+            <div class="dropdown">
+              <button onclick="dropDotMenu()" class="dropbtn"><svg xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                  <path
+                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                </svg></button>
+              <div id="dotMenu" class="dropdown-content">
+                <div class="raw">
+                  <a class="content-a" href="#"onclick="openNav()">File </a>
+                    <div class="arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class=" bi-caret-right-fill" id="arrow-r" viewBox="0 0 16 16">
+                    <path
+                      d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
                   </svg>
-                </button>
-                <div id="dotMenu" class="dropdown-content">
-                  <a href="#" onclick="openNav()">Link 1</a>
-                  <a href="#">Link 2</a>
-                  <a class="content-a" href="#" onclick="openSubMenu()"
-                    >Link 3
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="arrow bi-caret-right-fill" id="arrow-r" viewBox="0 0 16 16">
-                      <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                  </div>
+              </div>
+             
+
+                <div class="raw">
+                  <a class="content-a" href="#">Modifica </a>
+                    <div class="arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class=" bi-caret-right-fill" id="arrow-r" viewBox="0 0 16 16">
+                    <path
+                      d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
                     </svg>
-                  </a>
-                  <div class="subMenu" id="sub-list">
-                    <a class="content-a" href="">link 4</a>
-                    <a class="content-a" href="">link 5</a>
-                    <a class="content-a" href="">link 6</a>
+                    </div>
+                  </div>
+
+               <div class="raw">
+                <a class="content-a" href="#"onclick="openSubMenu()">Visualizza </a>
+                  <div class="arrow">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class=" bi-caret-right-fill" id="arrow-r" viewBox="0 0 16 16">
+                  <path
+                    d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                  </svg>
                   </div>
                 </div>
+
+                <div class="raw">
+                <a class="content-a" href="#">Riproduzione </a>
+                  <div class="arrow">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class=" bi-caret-right-fill" id="arrow-r" viewBox="0 0 16 16">
+                  <path
+                    d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                  </svg>
+                  </div>
+                </div>
+               
+
+               <div class="raw">
+                    <a class="content-a" href="#">Assistenza</a>
+                    <div class="arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi-caret-right-fill" id="arrow-r" viewBox="0 0 16 16">
+                        <path
+                          d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                      </svg>
+                   </div>
+               </div>
+              
+                 
+                   
+                      <div class="subMenu" id="sub-list">
+                      <div class="list-a">
+                        <a class="content-a" href="">Zoom in</a>
+                        <a class="content-a" href="">Zoom out</a>
+                        <a class="content-a" href="">Reimposta zoom</a>
+                        <hr>
+                        <a class="content-a" href="">Accelerazione hardware </a>
+                        <a class="content-a" href="">Attività amici</a>
+                      </div>
+                     
+                      </div>
+                
               </div>
+          </div>
 
               <!--dot inizio-->
               <div id="list-menu">
