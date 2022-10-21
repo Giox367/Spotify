@@ -18,6 +18,7 @@ let resAlbum = [];
 
 window.onload = async () => {
   await getFetchAlbum();
+  titleInSidebar(arrayFetchAlbum);
 };
 
 async function callFetch() {
@@ -99,4 +100,11 @@ function fetchDisplayAlbum(arrayFetchAlbum) {
             </div>
         </div>`;
   }
+}
+function titleInSidebar(arrayFetchAlbum) {
+  let songlist = document.querySelector("#playlist");
+
+  arrayFetchAlbum.forEach((album) => {
+    songlist.innerHTML += ` <li><a class="btn text-white" href="/album.html?id=${album.id}">${album.title}</a></li>`;
+  });
 }

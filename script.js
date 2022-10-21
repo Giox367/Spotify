@@ -43,12 +43,11 @@ let albumListURL = [
   "https://striveschool-api.herokuapp.com/api/deezer/album/895679",
   "https://striveschool-api.herokuapp.com/api/deezer/album/98758",
   "https://striveschool-api.herokuapp.com/api/deezer/album/98759",
-  //"https://striveschool-api.herokuapp.com/api/deezer/album/98745",
 ];
 
 window.onload = async () => {
   let albums = await getAlbums(albumListURL);
-
+  titleInSidebar(albums);
   displayFirstAlbum(albums[0]);
   displayFavoritesAlbums(albums.slice(1, 7));
   displayAllOtherAlbums(albums.slice(7));
@@ -139,6 +138,7 @@ function displayFavoritesAlbums(albums) {
 
 function displayAllOtherAlbums(albums) {
   let display = document.querySelector("#third > .row");
+
   albums.forEach((album) => {
     display.innerHTML += `<div class="col-sm-12 col-lg-6 col-xl-4">
             <div class="card m-1">
@@ -151,5 +151,12 @@ function displayAllOtherAlbums(albums) {
             </div>
             </div>
         </div>`;
+  });
+}
+function titleInSidebar(albums) {
+  let songlist = document.querySelector("#playlist");
+
+  albums.forEach((album) => {
+    songlist.innerHTML += ` <li><a class="btn text-white" href="/album.html?id=${album.id}">${album.title}</a></li>`;
   });
 }

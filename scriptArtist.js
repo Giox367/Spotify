@@ -26,6 +26,7 @@ let resTracks = [];
 window.onload = async () => {
   fetchDisplayArtist();
   getFetchArtist();
+  titleInSidebar();
 };
 
 async function callFetch() {
@@ -61,4 +62,9 @@ async function getFetchArtist() {
     <div class="track-duration col-3 text-center">${tracks.data[i].duration}</div>
     </div>`;
   }
+}
+function titleInSidebar() {
+  let songlist = document.querySelector("#playlist");
+
+  songlist.innerHTML += ` <li><a class="btn text-white" href="/album.html?id=${? cosacimettoquadentro ?}>${? cosacimettoquadentro ? }</a></li>`;
 }
