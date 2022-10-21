@@ -201,10 +201,6 @@ body {
   width: 350px;
 }
 
-.progress-bar {
-  background-color: white;
-}
-
 #commands {
   display: flex;
   flex-direction: column;
@@ -461,7 +457,7 @@ body {
   padding-top: 1rem;
 }
 
-#topbar-mobile-bottom svg, #player-mobile svg {
+#topbar-mobile-bottom svg {
   width: 25px;
 }
 
@@ -471,36 +467,12 @@ body {
 
 #topbar-mobile-bottom {
   display: none;
-  margin: 0 auto;
 }
 
 .icon-mobile-menu {
   display: flex;
   align-items: center;
   flex-direction: column;
-}
-
-.track {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 1rem;
-}
-
-#player-mobile {
-  position: sticky;
-  bottom: 82px;
-  background-color: rgb(58, 58, 58);
-  display: none;
-  padding: 1rem;
-  border-radius: 0.8rem;
-  margin-inline: 0 auto;
-}
-
-.player-mobile-track {
-  display: flex;
-  justify-content: flex-end;
-  gap: 1rem;
 }
 
 .content-a {
@@ -557,9 +529,14 @@ svg {
   #main-content {
     width: 100%;
   }
+<<<<<<< HEAD
   .album-btn {
     position: relative;
     top: 1rem !important;
+=======
+  #topbar-mobile, #topbar-mobile-bottom {
+    display: flex;
+>>>>>>> parent of 0f0969d (consegna)
   }
 }
 @media screen and (max-width: 768px) {
