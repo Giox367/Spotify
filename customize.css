@@ -428,6 +428,44 @@ body {
   bottom: 4rem;
 }
 
+#topbar-mobile {
+  display: flex;
+  align-items: center;
+  display: none;
+  margin-bottom: 2rem;
+}
+
+#topbar-mobile .col-4 {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+#topbar-mobile-bottom {
+  position: sticky;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4588235294);
+  padding-top: 1rem;
+}
+
+#topbar-mobile-bottom svg {
+  width: 25px;
+}
+
+#topbar-mobile svg {
+  width: 25px;
+}
+
+#topbar-mobile-bottom {
+  display: none;
+}
+
+.icon-mobile-menu {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .content-a {
   text-align: left;
   line-height: 35px;
@@ -465,11 +503,14 @@ svg {
 }
 
 @media screen and (max-width: 576px) {
-  #side-left, #player, #topbar {
+  #side-left, #player, #topbar, #first {
     display: none;
   }
   #main-content {
     width: 100%;
+  }
+  #topbar-mobile, #topbar-mobile-bottom {
+    display: flex;
   }
 }
 

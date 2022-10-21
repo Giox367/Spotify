@@ -355,6 +355,39 @@ body {
   bottom: 4rem
 }
 
+#topbar-mobile {
+  display: flex;
+  align-items: center;
+  display: none;
+  margin-bottom: 2rem;
+  
+}
+#topbar-mobile .col-4 {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+#topbar-mobile-bottom {
+ position: sticky;
+ bottom: 0;
+ background-color: #00000075;
+ padding-top: 1rem;
+}
+#topbar-mobile-bottom svg {
+  width: 25px;
+}
+#topbar-mobile svg {
+  width: 25px;
+}
+#topbar-mobile-bottom {
+  display: none;
+}
+.icon-mobile-menu {
+  display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 
 //-----------------
 
@@ -400,8 +433,11 @@ svg {
 // media query
 
 @media screen and (max-width: 576px) {
-#side-left, #player, #topbar{ display: none;}
+#side-left, #player, #topbar,#first{ display: none;}
 #main-content {
   width: 100%;
+}
+#topbar-mobile, #topbar-mobile-bottom {
+  display: flex;
 }
 }
