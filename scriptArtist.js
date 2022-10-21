@@ -43,7 +43,7 @@ async function fetchDisplayArtist() {
   let fetchDisplayArtist = document.getElementById("artistDisplay");
   fetchDisplayArtist.innerHTML = `<div id="artist-background"style="background-image:url(${res.picture_big});">
    <div class="artist-title"><h2>${res.name}</h2>
-   <p>${res.nb_fan}</p></div>
+   <p>${res.nb_fan} ascoltatori mensili</p></div>
    </div>`;
 }
 async function getFetchArtist() {
