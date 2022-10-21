@@ -251,8 +251,9 @@ body {
 }
 
 #card-album:last-child,
-#track-of-album:last-child {
-  margin-bottom: 100px;
+#track-of-album:last-child,
+.track-album:last-child {
+  margin-bottom: 5rem;
 }
 #playlist p:last-child {
   margin-bottom: 21rem;
@@ -305,6 +306,53 @@ body {
 .card {
   background-color: #292929;
   border-radius: 0.8rem;
+}
+
+.green-round-btn {
+  color: #1DB954;
+    width: 4rem;
+    border-radius: 50%;
+    background: black;
+    cursor: pointer
+}
+.no-border-btn {
+  border: none;
+  background: none;
+}
+.btn-border-radius {
+  border-radius: 0.5rem;
+ padding: 1rem;
+  padding-block: 0.3rem;
+  background: none;
+  border: 1px solid lightgray;
+}
+
+#popolari h6 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 2em;
+}
+
+.track-album {
+  display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.track-img  {
+  display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.artist-title h2 {
+  font-size: 4rem;
+  position: relative;
+  bottom: 4rem; 
+}
+.artist-title p {
+  position: relative;
+  bottom: 4rem
 }
 
 

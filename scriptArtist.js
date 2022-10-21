@@ -42,7 +42,7 @@ async function fetchDisplayArtist() {
   let res = await callFetch();
   let fetchDisplayArtist = document.getElementById("artistDisplay");
   fetchDisplayArtist.innerHTML = `<div id="artist-background"style="background-image:url(${res.picture_big});">
-   <div class="artist-title"><h1>${res.name}</h1>
+   <div class="artist-title"><h2>${res.name}</h2>
    <p>${res.nb_fan}</p></div>
    </div>`;
 }
@@ -55,8 +55,8 @@ async function getFetchArtist() {
   // tracks.data.forEach(() =>
   for (let i = 0; i < tracks.data.length; i++) {
     let div = document.getElementById("song-track");
-    div.innerHTML += `<div class="track-album row"><div class="track-img col-3 text-center"><img src=${resArtist.picture_small}></div>
-    <div class="track-title col-3 text-center"><p>${tracks.data[i].title}</p></div>
+    div.innerHTML += `<div class="track-album row"><div class="track-img col-3 text-center"><img src=${resArtist.picture_small}>
+    <p>${tracks.data[i].title}</p></div>
     <div class="track-rank col-3 text-center">${tracks.data[i].rank}</div>
     <div class="track-duration col-3 text-center">${tracks.data[i].duration}</div>
     </div>`;
