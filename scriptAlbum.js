@@ -92,13 +92,14 @@ function fetchDisplayAlbum(arrayFetchAlbum) {
                   .map((track) => {
                     return `<div class="track-album row">
                      <div class="track-title col-4 text-center"><p>${track.title}</p></div>
-                     <div class="track-rank col-4 text-center"><p>${track.rank}</p></div>
+                     <div class="track-rank col-md-0 col-lg-4 text-center"><p>${track.rank}</p></div>
                      <div class="track-duration col-4 text-center"><p>${track.duration}</p></div>
             
                  </div>`;
                   })
                   .join("")}
             </div>
-        </div>`;
+        </div>
+        <div></div>`;
   }
 }
