@@ -103,7 +103,7 @@ h6 {
 .closebtn {
   cursor: pointer;
   border: none;
-    background: none;
+  background: none;
 }
 .openbtn,
 .dropbtn {
@@ -192,7 +192,7 @@ body {
   font-size: 12px;
 }
 #main-content {
-  background: linear-gradient(186deg, rgba(42,42,42,1) 0%, rgba(0,0,0,1) 100%);
+  background: linear-gradient(186deg, rgba(42, 42, 42, 1) 0%, rgba(0, 0, 0, 1) 100%);
   color: white;
 }
 
@@ -277,7 +277,7 @@ body {
   color: black;
   border-radius: 1.5rem;
   width: 4.6rem;
-  background: #1DB954;
+  background: #1db954;
   border: none;
   font-weight: 700;
   padding-block: 0.3rem;
@@ -296,12 +296,12 @@ body {
   align-items: center;
   gap: 1rem;
 }
-#annuncio{
+#annuncio {
   padding-left: 4rem;
 }
 
 .card-body {
-  height: 4rem;
+  height: 5rem;
 }
 .card {
   background-color: #292929;
@@ -309,11 +309,11 @@ body {
 }
 
 .green-round-btn {
-  color: #1DB954;
-    width: 4rem;
-    border-radius: 50%;
-    background: black;
-    cursor: pointer
+  color: #1db954;
+  width: 4rem;
+  border-radius: 50%;
+  background: black;
+  cursor: pointer;
 }
 .no-border-btn {
   border: none;
@@ -321,7 +321,7 @@ body {
 }
 .btn-border-radius {
   border-radius: 0.5rem;
- padding: 1rem;
+  padding: 1rem;
   padding-block: 0.3rem;
   background: none;
   border: 1px solid lightgray;
@@ -335,26 +335,25 @@ body {
 
 .track-album {
   display: flex;
-    align-items: flex-start;
-    margin-bottom: 2rem;
-    justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  justify-content: center;
 }
 
-.track-img  {
+.track-img {
   display: flex;
-    align-items: center;
-    justify-content: space-around;
+  align-items: center;
+  justify-content: space-around;
 }
 .artist-title h2 {
   font-size: 4rem;
   position: relative;
-  bottom: 4rem; 
+  bottom: 4rem;
 }
 .artist-title p {
   position: relative;
-  bottom: 4rem
+  bottom: 4rem;
 }
-
 
 //-----------------
 
@@ -400,8 +399,12 @@ svg {
 // media query
 
 @media screen and (max-width: 576px) {
-#side-left, #player, #topbar{ display: none;}
-#main-content {
-  width: 100%;
-}
+  #side-left,
+  #player,
+  #topbar {
+    display: none;
+  }
+  #main-content {
+    width: 100%;
+  }
 }
